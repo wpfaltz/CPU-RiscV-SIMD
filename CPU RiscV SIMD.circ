@@ -1,0 +1,1892 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="3.9.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.9.0(https://github.com/logisim-evolution/).
+
+  <lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="facing" val="south"/>
+    </tool>
+    <tool name="Pin">
+      <a name="width" val="2"/>
+    </tool>
+    <tool name="Tunnel">
+      <a name="facing" val="east"/>
+    </tool>
+    <tool name="Clock">
+      <a name="facing" val="west"/>
+    </tool>
+    <tool name="Constant">
+      <a name="value" val="0x3"/>
+      <a name="width" val="2"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Memory" name="4"/>
+  <lib desc="#Base" name="8">
+    <tool name="Text Tool">
+      <a name="font" val="SansSerif plain 12"/>
+    </tool>
+  </lib>
+  <main name="main"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="8" map="Button2" name="Menu Tool"/>
+    <tool lib="8" map="Button3" name="Menu Tool"/>
+    <tool lib="8" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="8" name="Poke Tool"/>
+    <tool lib="8" name="Edit Tool"/>
+    <tool lib="8" name="Wiring Tool"/>
+    <tool lib="8" name="Text Tool">
+      <a name="font" val="SansSerif plain 12"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin"/>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </tool>
+    <sep/>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+    <tool lib="1" name="XOR Gate"/>
+    <tool lib="1" name="NAND Gate"/>
+    <tool lib="1" name="NOR Gate"/>
+    <sep/>
+    <tool lib="4" name="D Flip-Flop"/>
+    <tool lib="4" name="Register"/>
+  </toolbar>
+  <circuit name="main">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="main"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(2580,570)" name="Constant">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(270,300)" name="Clock"/>
+    <comp lib="0" loc="(280,340)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(3760,760)" name="Splitter">
+      <a name="fanout" val="32"/>
+      <a name="incoming" val="32"/>
+    </comp>
+    <comp lib="0" loc="(3810,430)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="24"/>
+      <a name="incoming" val="24"/>
+    </comp>
+    <comp lib="0" loc="(760,680)" name="Splitter">
+      <a name="fanout" val="32"/>
+      <a name="incoming" val="32"/>
+    </comp>
+    <comp lib="0" loc="(800,350)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="24"/>
+      <a name="incoming" val="24"/>
+    </comp>
+    <comp lib="1" loc="(1260,610)" name="NOT Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(2400,60)" name="NOT Gate"/>
+    <comp lib="1" loc="(2650,80)" name="AND Gate"/>
+    <comp lib="1" loc="(3140,660)" name="AND Gate"/>
+    <comp lib="1" loc="(3490,180)" name="AND Gate"/>
+    <comp lib="1" loc="(3600,190)" name="OR Gate"/>
+    <comp lib="2" loc="(2490,540)" name="Multiplexer">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="2" loc="(2560,400)" name="Multiplexer">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="2" loc="(2590,220)" name="Multiplexer">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="2" loc="(2590,470)" name="Multiplexer">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="2" loc="(2790,520)" name="Multiplexer">
+      <a name="facing" val="north"/>
+      <a name="select" val="2"/>
+      <a name="selloc" val="tr"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="2" loc="(2880,540)" name="Multiplexer">
+      <a name="facing" val="north"/>
+      <a name="select" val="2"/>
+      <a name="selloc" val="tr"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="2" loc="(340,400)" name="Multiplexer">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="2" loc="(4630,300)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(3880,440)" name="RAM">
+      <a name="addrWidth" val="24"/>
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="dataWidth" val="32"/>
+    </comp>
+    <comp lib="4" loc="(820,360)" name="ROM">
+      <a name="addrWidth" val="24"/>
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="contents">addr/data: 24 32
+0
+</a>
+      <a name="dataWidth" val="32"/>
+    </comp>
+    <comp loc="(1370,330)" name="IFID">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(1750,20)" name="Control_Unit">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(1790,660)" name="ImmGen">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(1800,400)" name="RegisterFile">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(1820,890)" name="Hazard">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(2310,330)" name="IDEX">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(2670,620)" name="ALU_Control">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(2950,180)" name="Somador">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(2990,390)" name="ALU">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(3000,900)" name="Forward">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(3390,300)" name="EXMEM">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(4460,260)" name="MEMWB">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(620,360)" name="PC4">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <wire from="(1060,420)" to="(1070,420)"/>
+    <wire from="(1070,320)" to="(1070,350)"/>
+    <wire from="(1070,350)" to="(1150,350)"/>
+    <wire from="(1070,410)" to="(1070,420)"/>
+    <wire from="(1070,410)" to="(1150,410)"/>
+    <wire from="(1090,290)" to="(1090,390)"/>
+    <wire from="(1090,390)" to="(1090,610)"/>
+    <wire from="(1090,390)" to="(1150,390)"/>
+    <wire from="(1090,610)" to="(1260,610)"/>
+    <wire from="(1110,270)" to="(1110,850)"/>
+    <wire from="(1110,850)" to="(3610,850)"/>
+    <wire from="(1120,230)" to="(1120,700)"/>
+    <wire from="(1120,700)" to="(1480,700)"/>
+    <wire from="(1130,250)" to="(1130,330)"/>
+    <wire from="(1130,250)" to="(1480,250)"/>
+    <wire from="(1130,330)" to="(1150,330)"/>
+    <wire from="(1290,610)" to="(1400,610)"/>
+    <wire from="(1370,330)" to="(1410,330)"/>
+    <wire from="(1370,370)" to="(1450,370)"/>
+    <wire from="(1370,390)" to="(1430,390)"/>
+    <wire from="(1370,410)" to="(1440,410)"/>
+    <wire from="(1370,430)" to="(1420,430)"/>
+    <wire from="(1400,1030)" to="(1860,1030)"/>
+    <wire from="(1400,510)" to="(1400,610)"/>
+    <wire from="(1400,510)" to="(1470,510)"/>
+    <wire from="(1400,610)" to="(1400,1030)"/>
+    <wire from="(1410,330)" to="(1410,340)"/>
+    <wire from="(1410,340)" to="(2020,340)"/>
+    <wire from="(1420,430)" to="(1420,620)"/>
+    <wire from="(1420,620)" to="(2090,620)"/>
+    <wire from="(1430,390)" to="(1430,950)"/>
+    <wire from="(1430,390)" to="(1510,390)"/>
+    <wire from="(1430,950)" to="(1600,950)"/>
+    <wire from="(1440,410)" to="(1440,420)"/>
+    <wire from="(1440,420)" to="(1440,970)"/>
+    <wire from="(1440,420)" to="(1580,420)"/>
+    <wire from="(1440,970)" to="(1600,970)"/>
+    <wire from="(1450,20)" to="(1450,370)"/>
+    <wire from="(1450,20)" to="(1530,20)"/>
+    <wire from="(1450,370)" to="(1450,650)"/>
+    <wire from="(1450,650)" to="(1550,650)"/>
+    <wire from="(1470,40)" to="(1470,510)"/>
+    <wire from="(1470,40)" to="(1530,40)"/>
+    <wire from="(1480,250)" to="(1480,330)"/>
+    <wire from="(1480,330)" to="(1480,510)"/>
+    <wire from="(1480,330)" to="(2070,330)"/>
+    <wire from="(1480,510)" to="(1530,510)"/>
+    <wire from="(1480,700)" to="(1480,810)"/>
+    <wire from="(1480,810)" to="(3400,810)"/>
+    <wire from="(1500,460)" to="(1500,790)"/>
+    <wire from="(1500,460)" to="(1580,460)"/>
+    <wire from="(1500,790)" to="(2780,790)"/>
+    <wire from="(1510,390)" to="(1510,710)"/>
+    <wire from="(1510,390)" to="(1540,390)"/>
+    <wire from="(1510,710)" to="(2090,710)"/>
+    <wire from="(1530,510)" to="(1530,890)"/>
+    <wire from="(1530,510)" to="(1570,510)"/>
+    <wire from="(1530,890)" to="(1600,890)"/>
+    <wire from="(1540,390)" to="(1540,610)"/>
+    <wire from="(1540,390)" to="(1570,390)"/>
+    <wire from="(1540,610)" to="(1820,610)"/>
+    <wire from="(1550,320)" to="(1550,480)"/>
+    <wire from="(1550,320)" to="(2020,320)"/>
+    <wire from="(1550,480)" to="(1580,480)"/>
+    <wire from="(1550,650)" to="(1550,660)"/>
+    <wire from="(1550,660)" to="(1570,660)"/>
+    <wire from="(1560,440)" to="(1560,830)"/>
+    <wire from="(1560,440)" to="(1580,440)"/>
+    <wire from="(1560,830)" to="(2630,830)"/>
+    <wire from="(1570,390)" to="(1570,400)"/>
+    <wire from="(1570,400)" to="(1580,400)"/>
+    <wire from="(1570,500)" to="(1570,510)"/>
+    <wire from="(1570,500)" to="(1580,500)"/>
+    <wire from="(1570,840)" to="(1570,910)"/>
+    <wire from="(1570,840)" to="(2700,840)"/>
+    <wire from="(1570,910)" to="(1600,910)"/>
+    <wire from="(1590,860)" to="(1590,930)"/>
+    <wire from="(1590,860)" to="(2410,860)"/>
+    <wire from="(1590,930)" to="(1600,930)"/>
+    <wire from="(1750,100)" to="(1890,100)"/>
+    <wire from="(1750,120)" to="(1950,120)"/>
+    <wire from="(1750,140)" to="(1980,140)"/>
+    <wire from="(1750,160)" to="(2040,160)"/>
+    <wire from="(1750,180)" to="(2000,180)"/>
+    <wire from="(1750,20)" to="(1930,20)"/>
+    <wire from="(1750,200)" to="(2060,200)"/>
+    <wire from="(1750,220)" to="(1810,220)"/>
+    <wire from="(1750,240)" to="(1830,240)"/>
+    <wire from="(1750,260)" to="(1960,260)"/>
+    <wire from="(1750,280)" to="(1970,280)"/>
+    <wire from="(1750,40)" to="(1870,40)"/>
+    <wire from="(1750,60)" to="(1910,60)"/>
+    <wire from="(1750,80)" to="(1850,80)"/>
+    <wire from="(1790,660)" to="(1800,660)"/>
+    <wire from="(1800,400)" to="(1830,400)"/>
+    <wire from="(1800,420)" to="(1810,420)"/>
+    <wire from="(1800,650)" to="(1800,660)"/>
+    <wire from="(1800,650)" to="(1860,650)"/>
+    <wire from="(1810,220)" to="(1810,370)"/>
+    <wire from="(1810,370)" to="(1930,370)"/>
+    <wire from="(1810,420)" to="(1810,590)"/>
+    <wire from="(1810,590)" to="(2090,590)"/>
+    <wire from="(1820,610)" to="(1820,690)"/>
+    <wire from="(1820,690)" to="(2090,690)"/>
+    <wire from="(1820,890)" to="(1860,890)"/>
+    <wire from="(1830,240)" to="(1830,360)"/>
+    <wire from="(1830,360)" to="(1990,360)"/>
+    <wire from="(1830,400)" to="(1830,570)"/>
+    <wire from="(1830,570)" to="(2090,570)"/>
+    <wire from="(1850,510)" to="(2090,510)"/>
+    <wire from="(1850,80)" to="(1850,510)"/>
+    <wire from="(1860,610)" to="(1860,650)"/>
+    <wire from="(1860,610)" to="(2090,610)"/>
+    <wire from="(1860,890)" to="(1860,1030)"/>
+    <wire from="(1870,40)" to="(1870,530)"/>
+    <wire from="(1870,530)" to="(2090,530)"/>
+    <wire from="(1890,100)" to="(1890,490)"/>
+    <wire from="(1890,490)" to="(2090,490)"/>
+    <wire from="(190,230)" to="(1120,230)"/>
+    <wire from="(190,230)" to="(190,410)"/>
+    <wire from="(190,410)" to="(310,410)"/>
+    <wire from="(1910,550)" to="(2090,550)"/>
+    <wire from="(1910,60)" to="(1910,550)"/>
+    <wire from="(1930,20)" to="(1930,350)"/>
+    <wire from="(1930,350)" to="(2090,350)"/>
+    <wire from="(1930,370)" to="(1930,650)"/>
+    <wire from="(1930,650)" to="(2090,650)"/>
+    <wire from="(1950,120)" to="(1950,470)"/>
+    <wire from="(1950,470)" to="(2090,470)"/>
+    <wire from="(1960,260)" to="(1960,730)"/>
+    <wire from="(1960,730)" to="(2090,730)"/>
+    <wire from="(1970,280)" to="(1970,750)"/>
+    <wire from="(1970,750)" to="(2090,750)"/>
+    <wire from="(1980,140)" to="(1980,450)"/>
+    <wire from="(1980,450)" to="(2090,450)"/>
+    <wire from="(1990,360)" to="(1990,670)"/>
+    <wire from="(1990,670)" to="(2090,670)"/>
+    <wire from="(2000,180)" to="(2000,410)"/>
+    <wire from="(2000,410)" to="(2090,410)"/>
+    <wire from="(2020,260)" to="(2020,320)"/>
+    <wire from="(2020,260)" to="(2180,260)"/>
+    <wire from="(2020,340)" to="(2020,430)"/>
+    <wire from="(2020,430)" to="(2090,430)"/>
+    <wire from="(2040,160)" to="(2040,370)"/>
+    <wire from="(2040,370)" to="(2090,370)"/>
+    <wire from="(2060,200)" to="(2060,390)"/>
+    <wire from="(2060,390)" to="(2090,390)"/>
+    <wire from="(2070,290)" to="(2070,330)"/>
+    <wire from="(2070,290)" to="(2730,290)"/>
+    <wire from="(2070,330)" to="(2090,330)"/>
+    <wire from="(2090,620)" to="(2090,630)"/>
+    <wire from="(2090,670)" to="(2100,670)"/>
+    <wire from="(2180,20)" to="(2180,260)"/>
+    <wire from="(2180,20)" to="(4480,20)"/>
+    <wire from="(2310,330)" to="(2320,330)"/>
+    <wire from="(2310,350)" to="(2330,350)"/>
+    <wire from="(2310,370)" to="(2380,370)"/>
+    <wire from="(2310,390)" to="(2360,390)"/>
+    <wire from="(2310,410)" to="(2400,410)"/>
+    <wire from="(2310,430)" to="(2460,430)"/>
+    <wire from="(2310,450)" to="(2410,450)"/>
+    <wire from="(2310,470)" to="(2340,470)"/>
+    <wire from="(2310,490)" to="(2320,490)"/>
+    <wire from="(2310,510)" to="(2340,510)"/>
+    <wire from="(2310,530)" to="(2320,530)"/>
+    <wire from="(2310,550)" to="(2430,550)"/>
+    <wire from="(2310,570)" to="(2340,570)"/>
+    <wire from="(2310,590)" to="(2440,590)"/>
+    <wire from="(2310,600)" to="(2310,610)"/>
+    <wire from="(2310,600)" to="(2410,600)"/>
+    <wire from="(2310,630)" to="(2360,630)"/>
+    <wire from="(2310,650)" to="(2400,650)"/>
+    <wire from="(2310,670)" to="(2380,670)"/>
+    <wire from="(2310,690)" to="(2360,690)"/>
+    <wire from="(2310,710)" to="(2450,710)"/>
+    <wire from="(2310,730)" to="(2430,730)"/>
+    <wire from="(2320,330)" to="(2370,330)"/>
+    <wire from="(2320,480)" to="(2320,490)"/>
+    <wire from="(2320,480)" to="(2350,480)"/>
+    <wire from="(2320,520)" to="(2320,530)"/>
+    <wire from="(2320,520)" to="(2350,520)"/>
+    <wire from="(2320,60)" to="(2320,330)"/>
+    <wire from="(2320,60)" to="(2370,60)"/>
+    <wire from="(2330,350)" to="(2330,680)"/>
+    <wire from="(2330,680)" to="(2450,680)"/>
+    <wire from="(2340,340)" to="(2340,470)"/>
+    <wire from="(2340,340)" to="(3170,340)"/>
+    <wire from="(2340,490)" to="(2340,510)"/>
+    <wire from="(2340,490)" to="(2390,490)"/>
+    <wire from="(2340,530)" to="(2340,570)"/>
+    <wire from="(2340,530)" to="(2440,530)"/>
+    <wire from="(2350,350)" to="(2350,480)"/>
+    <wire from="(2350,350)" to="(2700,350)"/>
+    <wire from="(2350,510)" to="(2350,520)"/>
+    <wire from="(2350,510)" to="(2410,510)"/>
+    <wire from="(2360,390)" to="(2360,620)"/>
+    <wire from="(2360,620)" to="(2450,620)"/>
+    <wire from="(2360,630)" to="(2360,660)"/>
+    <wire from="(2360,660)" to="(2450,660)"/>
+    <wire from="(2360,690)" to="(2360,980)"/>
+    <wire from="(2360,980)" to="(2780,980)"/>
+    <wire from="(2370,330)" to="(2370,570)"/>
+    <wire from="(2370,570)" to="(2470,570)"/>
+    <wire from="(2380,370)" to="(2380,640)"/>
+    <wire from="(2380,640)" to="(2450,640)"/>
+    <wire from="(2380,670)" to="(2380,960)"/>
+    <wire from="(2380,960)" to="(2780,960)"/>
+    <wire from="(2390,460)" to="(2390,490)"/>
+    <wire from="(2390,460)" to="(2470,460)"/>
+    <wire from="(2400,210)" to="(2400,410)"/>
+    <wire from="(2400,210)" to="(2560,210)"/>
+    <wire from="(2400,410)" to="(2530,410)"/>
+    <wire from="(2400,470)" to="(2400,650)"/>
+    <wire from="(2400,470)" to="(2480,470)"/>
+    <wire from="(2400,60)" to="(2600,60)"/>
+    <wire from="(2410,310)" to="(2410,450)"/>
+    <wire from="(2410,310)" to="(3160,310)"/>
+    <wire from="(2410,500)" to="(2410,510)"/>
+    <wire from="(2410,500)" to="(2500,500)"/>
+    <wire from="(2410,600)" to="(2410,860)"/>
+    <wire from="(2410,600)" to="(2720,600)"/>
+    <wire from="(2430,230)" to="(2430,390)"/>
+    <wire from="(2430,230)" to="(2560,230)"/>
+    <wire from="(2430,390)" to="(2430,550)"/>
+    <wire from="(2430,390)" to="(2530,390)"/>
+    <wire from="(2430,730)" to="(2430,760)"/>
+    <wire from="(2430,760)" to="(2740,760)"/>
+    <wire from="(2440,510)" to="(2440,530)"/>
+    <wire from="(2440,510)" to="(2590,510)"/>
+    <wire from="(2440,530)" to="(2460,530)"/>
+    <wire from="(2440,550)" to="(2440,590)"/>
+    <wire from="(2440,550)" to="(2460,550)"/>
+    <wire from="(2440,590)" to="(2610,590)"/>
+    <wire from="(2450,710)" to="(2450,730)"/>
+    <wire from="(2450,730)" to="(2690,730)"/>
+    <wire from="(2460,100)" to="(2460,430)"/>
+    <wire from="(2460,100)" to="(2600,100)"/>
+    <wire from="(2460,430)" to="(2540,430)"/>
+    <wire from="(2470,450)" to="(2470,460)"/>
+    <wire from="(2470,450)" to="(2490,450)"/>
+    <wire from="(2470,560)" to="(2470,570)"/>
+    <wire from="(2480,260)" to="(2480,470)"/>
+    <wire from="(2480,260)" to="(2570,260)"/>
+    <wire from="(2490,370)" to="(2490,450)"/>
+    <wire from="(2490,370)" to="(3160,370)"/>
+    <wire from="(2490,540)" to="(2510,540)"/>
+    <wire from="(2500,450)" to="(2500,500)"/>
+    <wire from="(2500,450)" to="(2550,450)"/>
+    <wire from="(2510,460)" to="(2510,540)"/>
+    <wire from="(2510,460)" to="(2560,460)"/>
+    <wire from="(2520,120)" to="(2520,500)"/>
+    <wire from="(2520,120)" to="(2710,120)"/>
+    <wire from="(2520,500)" to="(2570,500)"/>
+    <wire from="(2540,420)" to="(2540,430)"/>
+    <wire from="(2550,440)" to="(2550,450)"/>
+    <wire from="(2550,440)" to="(2620,440)"/>
+    <wire from="(2550,480)" to="(2550,540)"/>
+    <wire from="(2550,480)" to="(2560,480)"/>
+    <wire from="(2550,540)" to="(2590,540)"/>
+    <wire from="(2560,400)" to="(2640,400)"/>
+    <wire from="(2570,240)" to="(2570,260)"/>
+    <wire from="(2570,490)" to="(2570,500)"/>
+    <wire from="(2580,570)" to="(2590,570)"/>
+    <wire from="(2590,220)" to="(2680,220)"/>
+    <wire from="(2590,470)" to="(2630,470)"/>
+    <wire from="(2590,510)" to="(2590,530)"/>
+    <wire from="(2590,530)" to="(2710,530)"/>
+    <wire from="(2590,540)" to="(2590,570)"/>
+    <wire from="(2610,240)" to="(2610,590)"/>
+    <wire from="(2610,240)" to="(2690,240)"/>
+    <wire from="(2620,360)" to="(2620,440)"/>
+    <wire from="(2620,360)" to="(3140,360)"/>
+    <wire from="(2630,1000)" to="(2780,1000)"/>
+    <wire from="(2630,470)" to="(2630,590)"/>
+    <wire from="(2630,590)" to="(2860,590)"/>
+    <wire from="(2630,750)" to="(2630,830)"/>
+    <wire from="(2630,750)" to="(3660,750)"/>
+    <wire from="(2630,830)" to="(2630,1000)"/>
+    <wire from="(2640,400)" to="(2640,580)"/>
+    <wire from="(2640,580)" to="(2770,580)"/>
+    <wire from="(2650,80)" to="(2710,80)"/>
+    <wire from="(2670,620)" to="(2680,620)"/>
+    <wire from="(2670,640)" to="(2670,670)"/>
+    <wire from="(2670,670)" to="(3090,670)"/>
+    <wire from="(2670,880)" to="(2670,920)"/>
+    <wire from="(2670,880)" to="(3690,880)"/>
+    <wire from="(2670,920)" to="(2780,920)"/>
+    <wire from="(2680,180)" to="(2680,220)"/>
+    <wire from="(2680,180)" to="(2730,180)"/>
+    <wire from="(2680,430)" to="(2680,620)"/>
+    <wire from="(2680,430)" to="(2770,430)"/>
+    <wire from="(2690,200)" to="(2690,240)"/>
+    <wire from="(2690,200)" to="(2730,200)"/>
+    <wire from="(2690,450)" to="(2690,730)"/>
+    <wire from="(2690,450)" to="(2770,450)"/>
+    <wire from="(270,300)" to="(320,300)"/>
+    <wire from="(2700,350)" to="(2700,840)"/>
+    <wire from="(2700,350)" to="(3160,350)"/>
+    <wire from="(2710,1020)" to="(2780,1020)"/>
+    <wire from="(2710,530)" to="(2710,540)"/>
+    <wire from="(2710,540)" to="(2750,540)"/>
+    <wire from="(2710,730)" to="(2710,1020)"/>
+    <wire from="(2710,730)" to="(3500,730)"/>
+    <wire from="(2710,80)" to="(2710,120)"/>
+    <wire from="(2710,80)" to="(3060,80)"/>
+    <wire from="(2720,390)" to="(2720,510)"/>
+    <wire from="(2720,390)" to="(2770,390)"/>
+    <wire from="(2720,510)" to="(2790,510)"/>
+    <wire from="(2720,600)" to="(2720,680)"/>
+    <wire from="(2720,680)" to="(3060,680)"/>
+    <wire from="(2730,290)" to="(2730,900)"/>
+    <wire from="(2730,290)" to="(3130,290)"/>
+    <wire from="(2730,900)" to="(2780,900)"/>
+    <wire from="(2740,470)" to="(2740,760)"/>
+    <wire from="(2740,470)" to="(2770,470)"/>
+    <wire from="(2750,410)" to="(2750,520)"/>
+    <wire from="(2750,410)" to="(2770,410)"/>
+    <wire from="(2750,520)" to="(2790,520)"/>
+    <wire from="(2750,540)" to="(2750,610)"/>
+    <wire from="(2750,610)" to="(3030,610)"/>
+    <wire from="(2760,870)" to="(2760,940)"/>
+    <wire from="(2760,870)" to="(3450,870)"/>
+    <wire from="(2760,940)" to="(2780,940)"/>
+    <wire from="(2770,560)" to="(2770,580)"/>
+    <wire from="(2780,560)" to="(2780,790)"/>
+    <wire from="(2780,790)" to="(2870,790)"/>
+    <wire from="(2780,900)" to="(2790,900)"/>
+    <wire from="(2790,510)" to="(2790,520)"/>
+    <wire from="(2790,520)" to="(2880,520)"/>
+    <wire from="(2790,560)" to="(2790,700)"/>
+    <wire from="(2790,700)" to="(2880,700)"/>
+    <wire from="(280,340)" to="(290,340)"/>
+    <wire from="(280,390)" to="(280,530)"/>
+    <wire from="(280,390)" to="(310,390)"/>
+    <wire from="(280,530)" to="(730,530)"/>
+    <wire from="(2810,550)" to="(2830,550)"/>
+    <wire from="(2830,550)" to="(2830,710)"/>
+    <wire from="(2830,710)" to="(3000,710)"/>
+    <wire from="(2860,580)" to="(2860,590)"/>
+    <wire from="(2870,580)" to="(2870,790)"/>
+    <wire from="(2870,790)" to="(3630,790)"/>
+    <wire from="(2880,520)" to="(2880,540)"/>
+    <wire from="(2880,580)" to="(2880,700)"/>
+    <wire from="(2880,700)" to="(3430,700)"/>
+    <wire from="(290,340)" to="(290,370)"/>
+    <wire from="(290,370)" to="(390,370)"/>
+    <wire from="(2900,550)" to="(2930,550)"/>
+    <wire from="(2930,550)" to="(2930,660)"/>
+    <wire from="(2930,660)" to="(3020,660)"/>
+    <wire from="(2950,180)" to="(2960,180)"/>
+    <wire from="(2960,180)" to="(2960,220)"/>
+    <wire from="(2960,220)" to="(3030,220)"/>
+    <wire from="(2990,390)" to="(3010,390)"/>
+    <wire from="(2990,410)" to="(2990,450)"/>
+    <wire from="(2990,450)" to="(3020,450)"/>
+    <wire from="(2990,520)" to="(2990,650)"/>
+    <wire from="(2990,520)" to="(3020,520)"/>
+    <wire from="(2990,650)" to="(3090,650)"/>
+    <wire from="(3000,710)" to="(3000,900)"/>
+    <wire from="(3000,920)" to="(3020,920)"/>
+    <wire from="(3010,390)" to="(3010,430)"/>
+    <wire from="(3010,430)" to="(3090,430)"/>
+    <wire from="(3020,450)" to="(3020,520)"/>
+    <wire from="(3020,660)" to="(3020,920)"/>
+    <wire from="(3030,220)" to="(3030,410)"/>
+    <wire from="(3030,410)" to="(3160,410)"/>
+    <wire from="(3030,470)" to="(3030,610)"/>
+    <wire from="(3030,470)" to="(3160,470)"/>
+    <wire from="(3060,510)" to="(3160,510)"/>
+    <wire from="(3060,630)" to="(3060,680)"/>
+    <wire from="(3060,630)" to="(3140,630)"/>
+    <wire from="(3060,80)" to="(3060,510)"/>
+    <wire from="(3090,430)" to="(3090,450)"/>
+    <wire from="(3090,450)" to="(3160,450)"/>
+    <wire from="(3130,250)" to="(3130,290)"/>
+    <wire from="(3130,250)" to="(3850,250)"/>
+    <wire from="(3130,290)" to="(3160,290)"/>
+    <wire from="(3140,360)" to="(3140,400)"/>
+    <wire from="(3140,400)" to="(3170,400)"/>
+    <wire from="(3140,500)" to="(3140,630)"/>
+    <wire from="(3140,500)" to="(3170,500)"/>
+    <wire from="(3140,660)" to="(3150,660)"/>
+    <wire from="(3150,440)" to="(3150,660)"/>
+    <wire from="(3150,440)" to="(3170,440)"/>
+    <wire from="(3160,290)" to="(3160,300)"/>
+    <wire from="(3160,300)" to="(3170,300)"/>
+    <wire from="(3160,310)" to="(3160,320)"/>
+    <wire from="(3160,320)" to="(3170,320)"/>
+    <wire from="(3160,350)" to="(3160,360)"/>
+    <wire from="(3160,360)" to="(3170,360)"/>
+    <wire from="(3160,370)" to="(3160,380)"/>
+    <wire from="(3160,380)" to="(3170,380)"/>
+    <wire from="(3160,410)" to="(3160,420)"/>
+    <wire from="(3160,420)" to="(3170,420)"/>
+    <wire from="(3160,450)" to="(3160,460)"/>
+    <wire from="(3160,460)" to="(3170,460)"/>
+    <wire from="(3160,470)" to="(3160,480)"/>
+    <wire from="(3160,480)" to="(3170,480)"/>
+    <wire from="(3160,510)" to="(3160,520)"/>
+    <wire from="(3160,520)" to="(3170,520)"/>
+    <wire from="(320,250)" to="(1130,250)"/>
+    <wire from="(320,250)" to="(320,300)"/>
+    <wire from="(320,300)" to="(320,350)"/>
+    <wire from="(320,350)" to="(390,350)"/>
+    <wire from="(320,420)" to="(320,480)"/>
+    <wire from="(320,480)" to="(670,480)"/>
+    <wire from="(3390,160)" to="(3390,280)"/>
+    <wire from="(3390,160)" to="(3440,160)"/>
+    <wire from="(3390,280)" to="(3400,280)"/>
+    <wire from="(3390,300)" to="(3400,300)"/>
+    <wire from="(3390,320)" to="(3400,320)"/>
+    <wire from="(3390,340)" to="(3400,340)"/>
+    <wire from="(3390,360)" to="(3400,360)"/>
+    <wire from="(3390,380)" to="(3400,380)"/>
+    <wire from="(3390,400)" to="(3400,400)"/>
+    <wire from="(3390,420)" to="(3420,420)"/>
+    <wire from="(3390,440)" to="(3410,440)"/>
+    <wire from="(3390,460)" to="(3410,460)"/>
+    <wire from="(3390,480)" to="(3410,480)"/>
+    <wire from="(3390,500)" to="(3410,500)"/>
+    <wire from="(340,400)" to="(400,400)"/>
+    <wire from="(3400,280)" to="(3400,300)"/>
+    <wire from="(3400,310)" to="(3400,320)"/>
+    <wire from="(3400,310)" to="(3830,310)"/>
+    <wire from="(3400,330)" to="(3400,340)"/>
+    <wire from="(3400,330)" to="(3820,330)"/>
+    <wire from="(3400,350)" to="(3400,360)"/>
+    <wire from="(3400,350)" to="(3450,350)"/>
+    <wire from="(3400,370)" to="(3400,380)"/>
+    <wire from="(3400,370)" to="(4230,370)"/>
+    <wire from="(3400,400)" to="(3400,810)"/>
+    <wire from="(3410,430)" to="(3410,440)"/>
+    <wire from="(3410,430)" to="(3430,430)"/>
+    <wire from="(3410,450)" to="(3410,460)"/>
+    <wire from="(3410,450)" to="(3730,450)"/>
+    <wire from="(3410,470)" to="(3410,480)"/>
+    <wire from="(3410,470)" to="(3500,470)"/>
+    <wire from="(3410,490)" to="(3410,500)"/>
+    <wire from="(3410,490)" to="(3550,490)"/>
+    <wire from="(3420,200)" to="(3420,420)"/>
+    <wire from="(3420,200)" to="(3440,200)"/>
+    <wire from="(3430,430)" to="(3430,700)"/>
+    <wire from="(3430,430)" to="(3730,430)"/>
+    <wire from="(3450,350)" to="(3450,870)"/>
+    <wire from="(3450,350)" to="(4180,350)"/>
+    <wire from="(3490,180)" to="(3540,180)"/>
+    <wire from="(3500,470)" to="(3500,730)"/>
+    <wire from="(3500,470)" to="(3710,470)"/>
+    <wire from="(3540,170)" to="(3540,180)"/>
+    <wire from="(3540,170)" to="(3550,170)"/>
+    <wire from="(3550,210)" to="(3550,490)"/>
+    <wire from="(3600,190)" to="(3610,190)"/>
+    <wire from="(3610,190)" to="(3610,850)"/>
+    <wire from="(3630,290)" to="(3630,790)"/>
+    <wire from="(3630,290)" to="(4140,290)"/>
+    <wire from="(3660,320)" to="(3660,750)"/>
+    <wire from="(3660,320)" to="(4170,320)"/>
+    <wire from="(3690,170)" to="(3690,880)"/>
+    <wire from="(3690,170)" to="(4480,170)"/>
+    <wire from="(3710,390)" to="(3710,470)"/>
+    <wire from="(3710,390)" to="(4220,390)"/>
+    <wire from="(3730,400)" to="(3730,430)"/>
+    <wire from="(3730,400)" to="(4200,400)"/>
+    <wire from="(3730,430)" to="(3750,430)"/>
+    <wire from="(3730,450)" to="(3730,770)"/>
+    <wire from="(3730,770)" to="(3840,770)"/>
+    <wire from="(3750,430)" to="(3750,760)"/>
+    <wire from="(3750,760)" to="(3760,760)"/>
+    <wire from="(3780,440)" to="(3790,440)"/>
+    <wire from="(3780,450)" to="(3790,450)"/>
+    <wire from="(3780,460)" to="(3790,460)"/>
+    <wire from="(3780,470)" to="(3790,470)"/>
+    <wire from="(3780,480)" to="(3790,480)"/>
+    <wire from="(3780,490)" to="(3790,490)"/>
+    <wire from="(3780,500)" to="(3790,500)"/>
+    <wire from="(3780,510)" to="(3790,510)"/>
+    <wire from="(3780,520)" to="(3790,520)"/>
+    <wire from="(3780,530)" to="(3790,530)"/>
+    <wire from="(3780,540)" to="(3790,540)"/>
+    <wire from="(3780,550)" to="(3790,550)"/>
+    <wire from="(3780,560)" to="(3790,560)"/>
+    <wire from="(3780,570)" to="(3790,570)"/>
+    <wire from="(3780,580)" to="(3790,580)"/>
+    <wire from="(3780,590)" to="(3790,590)"/>
+    <wire from="(3780,600)" to="(3790,600)"/>
+    <wire from="(3780,610)" to="(3790,610)"/>
+    <wire from="(3780,620)" to="(3790,620)"/>
+    <wire from="(3780,630)" to="(3790,630)"/>
+    <wire from="(3780,640)" to="(3790,640)"/>
+    <wire from="(3780,650)" to="(3790,650)"/>
+    <wire from="(3780,660)" to="(3790,660)"/>
+    <wire from="(3780,670)" to="(3790,670)"/>
+    <wire from="(380,290)" to="(1090,290)"/>
+    <wire from="(380,290)" to="(380,420)"/>
+    <wire from="(380,420)" to="(400,420)"/>
+    <wire from="(3810,420)" to="(3810,430)"/>
+    <wire from="(3810,420)" to="(3870,420)"/>
+    <wire from="(3820,330)" to="(3820,490)"/>
+    <wire from="(3820,490)" to="(3880,490)"/>
+    <wire from="(3830,310)" to="(3830,500)"/>
+    <wire from="(3830,500)" to="(3880,500)"/>
+    <wire from="(3840,530)" to="(3840,770)"/>
+    <wire from="(3840,530)" to="(3880,530)"/>
+    <wire from="(3850,250)" to="(3850,480)"/>
+    <wire from="(3850,250)" to="(4240,250)"/>
+    <wire from="(3850,480)" to="(3870,480)"/>
+    <wire from="(3870,420)" to="(3870,450)"/>
+    <wire from="(3870,450)" to="(3880,450)"/>
+    <wire from="(3870,480)" to="(3870,510)"/>
+    <wire from="(3870,510)" to="(3880,510)"/>
+    <wire from="(390,350)" to="(390,360)"/>
+    <wire from="(390,360)" to="(400,360)"/>
+    <wire from="(390,370)" to="(390,380)"/>
+    <wire from="(390,380)" to="(400,380)"/>
+    <wire from="(4120,530)" to="(4210,530)"/>
+    <wire from="(4140,290)" to="(4140,440)"/>
+    <wire from="(4140,440)" to="(4640,440)"/>
+    <wire from="(4170,320)" to="(4170,420)"/>
+    <wire from="(4170,420)" to="(4500,420)"/>
+    <wire from="(4180,280)" to="(4180,350)"/>
+    <wire from="(4180,280)" to="(4240,280)"/>
+    <wire from="(4200,340)" to="(4200,400)"/>
+    <wire from="(4200,340)" to="(4240,340)"/>
+    <wire from="(4210,320)" to="(4210,530)"/>
+    <wire from="(4210,320)" to="(4240,320)"/>
+    <wire from="(4220,360)" to="(4220,390)"/>
+    <wire from="(4220,360)" to="(4240,360)"/>
+    <wire from="(4230,300)" to="(4230,370)"/>
+    <wire from="(4230,300)" to="(4240,300)"/>
+    <wire from="(4240,250)" to="(4240,260)"/>
+    <wire from="(4460,260)" to="(4480,260)"/>
+    <wire from="(4460,280)" to="(4480,280)"/>
+    <wire from="(4460,300)" to="(4510,300)"/>
+    <wire from="(4460,320)" to="(4560,320)"/>
+    <wire from="(4460,340)" to="(4500,340)"/>
+    <wire from="(4480,170)" to="(4480,260)"/>
+    <wire from="(4480,20)" to="(4480,170)"/>
+    <wire from="(4480,270)" to="(4480,280)"/>
+    <wire from="(4480,270)" to="(4610,270)"/>
+    <wire from="(4500,340)" to="(4500,420)"/>
+    <wire from="(4510,300)" to="(4510,330)"/>
+    <wire from="(4510,330)" to="(4580,330)"/>
+    <wire from="(4560,290)" to="(4560,320)"/>
+    <wire from="(4560,290)" to="(4600,290)"/>
+    <wire from="(4580,310)" to="(4580,330)"/>
+    <wire from="(4580,310)" to="(4600,310)"/>
+    <wire from="(4610,270)" to="(4610,280)"/>
+    <wire from="(4630,300)" to="(4640,300)"/>
+    <wire from="(4640,300)" to="(4640,440)"/>
+    <wire from="(620,360)" to="(730,360)"/>
+    <wire from="(670,270)" to="(1110,270)"/>
+    <wire from="(670,270)" to="(670,480)"/>
+    <wire from="(730,320)" to="(1070,320)"/>
+    <wire from="(730,320)" to="(730,360)"/>
+    <wire from="(730,360)" to="(730,530)"/>
+    <wire from="(730,530)" to="(730,660)"/>
+    <wire from="(730,660)" to="(760,660)"/>
+    <wire from="(760,660)" to="(760,680)"/>
+    <wire from="(800,350)" to="(800,370)"/>
+    <wire from="(800,370)" to="(820,370)"/>
+  </circuit>
+  <vhdl name="ALU">library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.ALL;
+use IEEE.std_logic_unsigned.ALL;
+
+entity ALU is
+    port(
+    A, B       : in std_logic_vector(31 downto 0);   -- Operandos A e B de 32 bits da ALU
+    controle   : in std_logic_vector(3 downto 0);    -- Entrada responsável por determinar a operação da ALU
+    result  : out std_logic_vector(31 downto 0);  -- Resultado da operação feita pela ALU
+    f_zero     : out std_logic;                      -- Flag indicadora de resultado igual a zero na operacão da ALU
+    mode       : in std_logic;                       -- Modo de operação: 0 para operação única e 1 para operação vetorial
+    vector_size     : in std_logic_vector(1 downto 0)     -- Tamanho do vetor de operações (usado no modo vetorial)
+    );
+end ALU;
+
+
+architecture Behavioral of ALU is
+
+-- Declaração dos sinais temporários da ALU
+signal result_nv : std_logic_vector(31 downto 0); -- Resultado não vetorial
+signal result_v  : std_logic_vector(31 downto 0); -- Resultado vetorial
+signal soma_v       : std_logic_vector(31 downto 0); -- Sinal temporário que armazena o resultado final da soma vetorial
+signal sub_v        : std_logic_vector(31 downto 0); -- Sinal temporário que armazena o resultado final da subtração vetorial
+signal shiftL_v     : std_logic_vector(31 downto 0); -- Sinal temporário que armazena o resultado final do Shift Left vetorial
+signal shiftR_v     : std_logic_vector(31 downto 0); -- Sinal temporário que armazena o resultado final da Shift Right vetorial
+
+signal A16_1 : std_logic_vector(15 downto 0);  -- Vetor que contém os bits de índice 31 até 16 do operando quando vecsize='10' (16 bits)
+signal A16_2 : std_logic_vector(15 downto 0);  -- Vetor que contém os bits de índice 15 até 0 do operando quando vecsize='10' (16 bits)
+
+signal A8_1 : std_logic_vector(7 downto 0);  -- Vetor que contém os bits de índice 31 até 24 do operando quando vecsize='01' (8 bits)
+signal A8_2 : std_logic_vector(7 downto 0);  -- Vetor que contém os bits de índice 23 até 16 do operando quando vecsize='01' (8 bits)
+signal A8_3 : std_logic_vector(7 downto 0);  -- Vetor que contém os bits de índice 15 até 8 do operando quando vecsize='01' (8 bits)
+signal A8_4 : std_logic_vector(7 downto 0);  -- Vetor que contém os bits de índice 7 até 0 do operando quando vecsize='01' (8 bits)
+
+signal A4_1 : std_logic_vector(3 downto 0);  -- Vetor que contém os bits de índice 31 até 28 do operando quando vecsize='00' (4 bits)
+signal A4_2 : std_logic_vector(3 downto 0);  -- Vetor que contém os bits de índice 27 até 24 do operando quando vecsize='00' (4 bits)
+signal A4_3 : std_logic_vector(3 downto 0);  -- Vetor que contém os bits de índice 23 até 20 do operando quando vecsize='00' (4 bits)
+signal A4_4 : std_logic_vector(3 downto 0);  -- Vetor que contém os bits de índice 19 até 16 do operando quando vecsize='00' (4 bits)
+signal A4_5 : std_logic_vector(3 downto 0);  -- Vetor que contém os bits de índice 15 até 12 do operando quando vecsize='00' (4 bits)
+signal A4_6 : std_logic_vector(3 downto 0);  -- Vetor que contém os bits de índice 11 até 8 do operando quando vecsize='00' (4 bits)
+signal A4_7 : std_logic_vector(3 downto 0);  -- Vetor que contém os bits de índice 7 até 4 do operando quando vecsize='00' (4 bits)
+signal A4_8 : std_logic_vector(3 downto 0);  -- Vetor que contém os bits de índice 3 até 0 do operando quando vecsize='00' (4 bits)
+
+signal integer_B : integer;                  -- Integer do valor binário que entra como operando B
+
+begin
+
+    -- Conversão da entrada B para integer para uso nas operações de deslocamento
+    integer_B &lt;= to_integer(unsigned(B));
+
+    -- Divisão do sinal de entrada A em subvetores para as operações vetoriais
+    A16_1 &lt;= A(31 downto 16);
+    A16_2 &lt;= A(15 downto 0);
+
+    A8_1 &lt;= A(31 downto 24);
+    A8_2 &lt;= A(23 downto 16);
+    A8_3 &lt;= A(15 downto 8);
+    A8_4 &lt;= A(7 downto 0);
+
+    A4_1 &lt;= A(31 downto 28);
+    A4_2 &lt;= A(27 downto 24);
+    A4_3 &lt;= A(23 downto 20);
+    A4_4 &lt;= A(19 downto 16);
+    A4_5 &lt;= A(15 downto 12);
+    A4_6 &lt;= A(11 downto 8);
+    A4_7 &lt;= A(7 downto 4);
+    A4_8 &lt;= A(3 downto 0);
+    
+    
+    -- Cálculos das operações vetoriais com base no tamanho do vetor (vecsize)
+    soma_v &lt;= (A + B) when vector_size = "11" else
+             ((A16_1 + B(31 downto 16)) &amp; (A16_2 + B(15 downto 0))) when vector_size = "10" else
+             ((A8_1 + B(31 downto 24)) &amp; (A8_2 + B(23 downto 16)) &amp; (A8_3 + B(15 downto 8)) &amp; (A8_4 + B(7 downto 0))) when vector_size = "01" else
+             ((A4_1 + B(31 downto 28)) &amp; (A4_2 + B(27 downto 24)) &amp; (A4_3 + B(23 downto 20)) &amp; (A4_4 + B(19 downto 16)) &amp; (A4_5 + B(15 downto 12)) &amp; (A4_6 + B(11 downto 8)) &amp; (A4_7 + B(7 downto 4)) &amp; (A4_8 + B(3 downto 0))) when vector_size = "00";
+    
+    sub_v &lt;= (A - B) when vector_size = "11" else
+             ((A16_1 - B(31 downto 16)) &amp; (A16_2 - B(15 downto 0))) when vector_size = "10" else
+             ((A8_1 - B(31 downto 24)) &amp; (A8_2 - B(23 downto 16)) &amp; (A8_3 - B(15 downto 8)) &amp; (A8_4 - B(7 downto 0))) when vector_size = "01" else
+             ((A4_1 - B(31 downto 28)) &amp; (A4_2 - B(27 downto 24)) &amp; (A4_3 - B(23 downto 20)) &amp; (A4_4 - B(19 downto 16)) &amp; (A4_5 - B(15 downto 12)) &amp; (A4_6 - B(11 downto 8)) &amp; (A4_7 - B(7 downto 4)) &amp; (A4_8 - B(3 downto 0))) when vector_size = "00";
+    
+    -- Cálculos das operações de deslocamento vetoriais
+    shiftL_v &lt;= (std_logic_vector(shift_left(unsigned(A), integer_B))) when vector_size = "11" else
+             ((std_logic_vector(shift_left(unsigned(A16_1), integer_B))) &amp; std_logic_vector(shift_left(unsigned(A16_2), integer_B))) when vector_size = "10" else
+             ((std_logic_vector(shift_left(unsigned(A8_1), integer_B))) &amp; (std_logic_vector(shift_left(unsigned(A8_2), integer_B))) &amp; (std_logic_vector(shift_left(unsigned(A8_3), integer_B))) &amp; (std_logic_vector(shift_left(unsigned(A8_4), integer_B)))) when vector_size = "01" else
+             ((std_logic_vector(shift_left(unsigned(A4_1), integer_B))) &amp; (std_logic_vector(shift_left(unsigned(A4_2), integer_B))) &amp; (std_logic_vector(shift_left(unsigned(A4_3), integer_B))) &amp; (std_logic_vector(shift_left(unsigned(A4_4), integer_B))) &amp; (std_logic_vector(shift_left(unsigned(A4_5), integer_B))) &amp; (std_logic_vector(shift_left(unsigned(A4_6), integer_B))) &amp; (std_logic_vector(shift_left(unsigned(A4_7), integer_B))) &amp; (std_logic_vector(shift_left(unsigned(A4_8), integer_B)))) when vector_size = "00";
+
+    shiftR_v &lt;= (std_logic_vector(shift_right(unsigned(A), integer_B))) when vector_size = "11" else
+             ((std_logic_vector(shift_right(unsigned(A16_1), integer_B))) &amp; std_logic_vector(shift_right(unsigned(A16_2), integer_B))) when vector_size = "10" else
+             ((std_logic_vector(shift_right(unsigned(A8_1), integer_B))) &amp; (std_logic_vector(shift_right(unsigned(A8_2), integer_B))) &amp; (std_logic_vector(shift_right(unsigned(A8_3), integer_B))) &amp; (std_logic_vector(shift_right(unsigned(A8_4), integer_B)))) when vector_size = "01" else
+             ((std_logic_vector(shift_right(unsigned(A4_1), integer_B))) &amp; (std_logic_vector(shift_right(unsigned(A4_2), integer_B))) &amp; (std_logic_vector(shift_right(unsigned(A4_3), integer_B))) &amp; (std_logic_vector(shift_right(unsigned(A4_4), integer_B))) &amp; (std_logic_vector(shift_right(unsigned(A4_5), integer_B))) &amp; (std_logic_vector(shift_right(unsigned(A4_6), integer_B))) &amp; (std_logic_vector(shift_right(unsigned(A4_7), integer_B))) &amp; (std_logic_vector(shift_right(unsigned(A4_8), integer_B)))) when vector_size = "00";
+    
+
+    -- ALU vetorial (mode = 1) 
+    result_v &lt;= soma_v when controle = "0010" else
+                sub_v when controle = "0110" else
+                shiftL_v when controle = "0011" else
+                shiftR_v when controle = "0111" else
+                (others =&gt; '0');
+    
+    -- ALU não vetorial (mode = 0)
+    result_nv &lt;= (A + B) when controle = "0010" else
+                   (A - B) when controle = "0110" else
+                   (A XOR B) when controle = "0101" else
+                   (A OR B) when controle = "0001" else
+                   (A AND B) when controle = "0000" else
+                   (std_logic_vector(shift_left(unsigned(A), integer_B))) when controle = "0011" else
+                   (std_logic_vector(shift_right(unsigned(A), integer_B))) when controle = "0111";
+    
+    -- Seleção do resultado de acordo com o sinal de controle "mode"
+    result &lt;= result_nv when mode = '0' else
+                result_v when mode = '1';
+                
+    -- Sinalização se o resultado é zero (serve para o Branch) -&gt; como as operações vetoriais não incluem Branch, basta verificar do resultado não vetorial
+    f_zero &lt;= '1' when result_nv = "00000000000000000000000000000000" else '0';   
+
+end Behavioral;</vhdl>
+  <vhdl name="ALU_Control">library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity ALU_Control is
+    port(
+        Funct7    		: IN std_logic_vector(6 downto 0);    	 -- Entrada do funct7
+        Funct3    		: IN std_logic_vector(2 downto 0);    	 -- Entrada do funct3
+        Op_Code    		: IN std_logic_vector(6 downto 0);   	 -- Entrada do opcode
+        Alu_Op   		: IN std_logic_vector(1 downto 0);       -- Entrada de códigos de operação da ALU (2 bits)
+        ALU_Out	 	: OUT std_logic_vector(3 downto 0);      -- Saída do controle da ALU (4 bits)
+        Beq_Bne		: OUT std_logic					 -- Sinal de controle para verificação de Beq ou Bne
+        );
+end ALU_Control;
+
+architecture Behavioral of ALU_Control is
+begin
+
+	ALU_Out &lt;= "0010" when Alu_Op = "00" else 	-- Operação de Load
+			 	 "0110" when Alu_Op = "01" else 	-- Operação de Branch
+			 	 "0010" when Funct7 = "0000000" and Funct3 = "000" else 	-- Operação de Soma
+			 	 "0110" when Funct7 = "0100000" and Funct3 = "000" else 	-- Operação de Subtração
+			 	 "0011" when Funct7 = "0000000" and Funct3 = "001" else 	-- Operação de Shift Left
+			 	 "0101" when Funct7 = "0000000" and Funct3 = "100" else 	-- Operação XOR
+			 	 "0111" when Funct7 = "0000000" and Funct3 = "101" else 	-- Operação de Shift Right
+			 	 "0001" when Funct7 = "0000000" and Funct3 = "110" else 	-- Operação OR
+			 	 "0000" when Funct7 = "0000000" and Funct3 = "111"; 		-- Operação AND
+	Beq_Bne &lt;= '1' when op_Code="1100011" and Funct3="000" else '0';			-- '1' quando a instrução for Beq
+	 
+end Behavioral;
+</vhdl>
+  <vhdl name="Control_Unit">library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity Control_Unit is
+    port(
+        instruction                	: IN  std_logic_vector(31 downto 0);  -- Entrada da Instrução
+        Stall                			: IN  std_logic;  				   -- Entrada do Hazard
+        Alu_Src, Reg_Write, Mem_To_Reg 	: OUT std_logic;                      -- Sinais de Controle (1 Bit)
+        Mem_Read, Mem_Write, Branch  	: OUT std_logic;                      -- Sinais de Controle (1 Bit)
+        Soma_PC 					: OUT std_logic;			   	   -- Sinais de Controle (1 Bit)	
+        Alu_Op		               	: OUT std_logic_vector(1 downto 0);   -- Saída da Operação da ALU (2 Bits)
+        S_funct7 					: OUT std_logic_vector(6 downto 0);   -- Saída do Funct7
+        S_funct3 					: OUT std_logic_vector(2 downto 0);   -- Saída do Funct3
+        S_opcode 					: OUT std_logic_vector(6 downto 0);   -- Saída do Opcode
+        Jump_Reg					: OUT std_logic;				   -- Indica quando a instrução é jalr	
+        mode						: OUT std_logic;				   -- Indica se é uma operação vetorial
+        Vector_size					: OUT std_logic_vector(1 downto 0));  -- Indica o tamanho do vetor
+        
+end Control_Unit;
+
+architecture Behavioral of Control_Unit is
+
+signal opcode : std_logic_vector(6 downto 0);	-- Opcode da Instrução
+signal funct7 : std_logic_vector(6 downto 0);	-- Funct7 da Instrução
+signal funct3 : std_logic_vector(2 downto 0);	-- Funct3 da Instrução
+
+
+begin
+	-- Definição do Opcode da Instrução
+	opcode(0) &lt;= instruction(0);
+	opcode(1) &lt;= instruction(1);
+	opcode(2) &lt;= instruction(2);
+	opcode(3) &lt;= instruction(3);
+	opcode(4) &lt;= instruction(4);
+	opcode(5) &lt;= instruction(5);
+	opcode(6) &lt;= instruction(6);
+	Soma_PC &lt;= '0'; 
+	Jump_Reg &lt;= '0';
+
+	process(Stall)
+	begin
+		IF (Stall = '1') THEN
+			Alu_Src &lt;= '0';
+			Reg_Write &lt;= '0';
+			Mem_To_Reg &lt;= '0';
+			Mem_Read &lt;= '0';
+			Mem_Write &lt;= '0';
+			Branch &lt;= '0';
+			Soma_PC &lt;= '0';
+			Jump_Reg &lt;= '0';
+		end if; 
+	end process;
+	-- Definição das Funct7, Funct3 e dos Sinais de Controle de acordo com o opcode.
+	process(opcode)
+	begin
+		IF (opcode = "0110011") THEN		-- R-Type Instruction
+			funct7(6) &lt;= instruction(31);
+			funct7(5) &lt;= instruction(30);
+			funct7(4) &lt;= instruction(29);
+			funct7(3) &lt;= instruction(28);
+			funct7(2) &lt;= instruction(27);
+			funct7(1) &lt;= instruction(26);
+			funct7(0) &lt;= instruction(25);
+			funct3(2) &lt;= instruction (14);
+			funct3(1) &lt;= instruction (13);
+			funct3(0) &lt;= instruction (12);
+			Alu_Src &lt;= '0'; 			
+			Reg_Write &lt;= '1';
+			Mem_To_Reg &lt;= '0';
+			Mem_Read &lt;= '0';
+			Mem_Write &lt;= '0';
+			Branch &lt;= '0';
+			mode &lt;= '0';
+			Vector_size &lt;= "11";
+			Alu_Op &lt;= "10";
+		END IF;
+		IF (opcode = "0010011") THEN		-- I-Type Instruction (ADDi, ANDi, ORi, XORi, SLTi)
+			funct7(6) &lt;= '0';
+			funct7(5) &lt;= '0';
+			funct7(4) &lt;= '0';
+			funct7(3) &lt;= '0';
+			funct7(2) &lt;= '0';
+			funct7(1) &lt;= '0';
+			funct7(0) &lt;= '0';
+			funct3(2) &lt;= instruction (14);
+			funct3(1) &lt;= instruction (13);
+			funct3(0) &lt;= instruction (12);
+			Alu_Src &lt;= '1'; 			
+			Reg_Write &lt;= '1';
+			Mem_To_Reg &lt;= '0';
+			Mem_Read &lt;= '0';
+			Mem_Write &lt;= '0';
+			Branch &lt;= '0';
+			mode &lt;= '0';
+			Vector_size &lt;= "11";
+			Alu_Op &lt;= "10";
+		END IF;
+		IF (opcode = "0000011") THEN		-- I-Type Instruction (Load)
+			funct7(6) &lt;= '0';
+			funct7(5) &lt;= '0';
+			funct7(4) &lt;= '0';
+			funct7(3) &lt;= '0';
+			funct7(2) &lt;= '0';
+			funct7(1) &lt;= '0';
+			funct7(0) &lt;= '0';
+			funct3(2) &lt;= '0';
+			funct3(1) &lt;= '0';
+			funct3(0) &lt;= '0';
+			Alu_Src &lt;= '1'; 			
+			Reg_Write &lt;= '1';
+			Mem_To_Reg &lt;= '1';
+			Mem_Read &lt;= '1';
+			Mem_Write &lt;= '0';
+			Branch &lt;= '0';
+			mode &lt;= '0';
+			Vector_size &lt;= "11";
+			Alu_Op &lt;= "00";
+		END IF;
+		IF (opcode = "1100111") THEN		-- I-Type Instruction (Jump) 
+			funct7(6) &lt;= '0';
+			funct7(5) &lt;= '0';
+			funct7(4) &lt;= '0';
+			funct7(3) &lt;= '0';
+			funct7(2) &lt;= '0';
+			funct7(1) &lt;= '0';
+			funct7(0) &lt;= '0';
+			funct3(2) &lt;= '0';
+			funct3(1) &lt;= '0';
+			funct3(0) &lt;= '0';
+			Alu_Src &lt;= '0'; 			
+			Reg_Write &lt;= '0';
+			Mem_To_Reg &lt;= '0';
+			Mem_Read &lt;= '0';
+			Mem_Write &lt;= '0';
+			Branch &lt;= '0';
+			Soma_PC &lt;= '1';
+			Jump_Reg &lt;= '1';
+			mode &lt;= '0';
+			Vector_size &lt;= "11";
+			Alu_Op &lt;= "01";
+		END IF;
+		IF (opcode = "0100011") THEN		-- S-Type Instruction 
+			funct7(6) &lt;= '0';
+			funct7(5) &lt;= '0';
+			funct7(4) &lt;= '0';
+			funct7(3) &lt;= '0';
+			funct7(2) &lt;= '0';
+			funct7(1) &lt;= '0';
+			funct7(0) &lt;= '0';
+			funct3(2) &lt;= '0';
+			funct3(1) &lt;= '0';
+			funct3(0) &lt;= '0';
+			Alu_Src &lt;= '1'; 			
+			Reg_Write &lt;= '0';
+			Mem_To_Reg &lt;= '0';
+			Mem_Read &lt;= '0';
+			Mem_Write &lt;= '1';
+			Branch &lt;= '0';
+			mode &lt;= '0';
+			Vector_size &lt;= "11";
+			Alu_Op &lt;= "00";
+		END IF;
+		IF (opcode = "1101111") THEN		-- UJ-Type Instruction (jal)
+			funct7(6) &lt;= '0';
+			funct7(5) &lt;= '0';
+			funct7(4) &lt;= '0';
+			funct7(3) &lt;= '0';
+			funct7(2) &lt;= '0';
+			funct7(1) &lt;= '0';
+			funct7(0) &lt;= '0';
+			funct3(2) &lt;= '0';
+			funct3(1) &lt;= '0';
+			funct3(0) &lt;= '0';
+			Alu_Src &lt;= '0'; 			
+			Reg_Write &lt;= '1';
+			Mem_To_Reg &lt;= '0';
+			Mem_Read &lt;= '0';
+			Mem_Write &lt;= '0';
+			Branch &lt;= '0';
+			Soma_PC &lt;= '1';
+			mode &lt;= '0';
+			Vector_size &lt;= "11";
+			Alu_Op &lt;= "10";
+		END IF;
+		IF (opcode = "0110111") THEN		-- U-Type Instruction (lui - soma com imediato muito grande)
+			funct7(6) &lt;= '0';
+			funct7(5) &lt;= '0';
+			funct7(4) &lt;= '0';
+			funct7(3) &lt;= '0';
+			funct7(2) &lt;= '0';
+			funct7(1) &lt;= '0';
+			funct7(0) &lt;= '0';
+			funct3(2) &lt;= '0';
+			funct3(1) &lt;= '0';
+			funct3(0) &lt;= '0';
+			Alu_Src &lt;= '1'; 			
+			Reg_Write &lt;= '1';
+			Mem_To_Reg &lt;= '0';
+			Mem_Read &lt;= '0';
+			Mem_Write &lt;= '0';
+			Branch &lt;= '0';
+			mode &lt;= '0';
+			Vector_size &lt;= "11";
+			Alu_Op &lt;= "10";
+		END IF;
+		IF (opcode = "0010111") THEN		-- U-Type Instruction (auipc, soma do pc com o imediato e guarda no registrador)
+			funct7(6) &lt;= '0';
+			funct7(5) &lt;= '0';
+			funct7(4) &lt;= '0';
+			funct7(3) &lt;= '0';
+			funct7(2) &lt;= '0';
+			funct7(1) &lt;= '0';
+			funct7(0) &lt;= '0';
+			funct3(2) &lt;= '0';
+			funct3(1) &lt;= '0';
+			funct3(0) &lt;= '0';
+			Alu_Src &lt;= '1'; 			
+			Reg_Write &lt;= '1';
+			Mem_To_Reg &lt;= '0';
+			Mem_Read &lt;= '0';
+			Mem_Write &lt;= '0';
+			Branch &lt;= '0';
+			Soma_PC &lt;= '1';
+			mode &lt;= '0';
+			Vector_size &lt;= "11";
+			Alu_Op &lt;= "10";
+		END IF;
+		IF (opcode = "1100011") THEN		-- Sb-Type Instruction 
+			funct7(6) &lt;= '0';
+			funct7(5) &lt;= '0';
+			funct7(4) &lt;= '0';
+			funct7(3) &lt;= '0';
+			funct7(2) &lt;= '0';
+			funct7(1) &lt;= '0';
+			funct7(0) &lt;= '0';
+			funct3(2) &lt;= instruction (14);
+			funct3(1) &lt;= instruction (13);
+			funct3(0) &lt;= instruction (12);
+			Alu_Src &lt;= '0'; 			
+			Reg_Write &lt;= '0';
+			Mem_To_Reg &lt;= '0';
+			Mem_Read &lt;= '0';
+			Mem_Write &lt;= '0';
+			Branch &lt;= '1';
+			mode &lt;= '0';
+			Vector_size &lt;= "11";
+			Alu_Op &lt;= "01";
+		END IF;
+		IF (opcode = "1111100") 	THEN		-- R-Type Vetorial Instruction (4bits)
+			funct7(6) &lt;= instruction(31);
+			funct7(5) &lt;= instruction(30);
+			funct7(4) &lt;= instruction(29);
+			funct7(3) &lt;= instruction(28);
+			funct7(2) &lt;= instruction(27);
+			funct7(1) &lt;= instruction(26);
+			funct7(0) &lt;= instruction(25);
+			funct3(2) &lt;= instruction (14);
+			funct3(1) &lt;= instruction (13);
+			funct3(0) &lt;= instruction (12);
+			Alu_Src &lt;= '0'; 			
+			Reg_Write &lt;= '1';
+			Mem_To_Reg &lt;= '0';
+			Mem_Read &lt;= '0';
+			Mem_Write &lt;= '0';
+			Branch &lt;= '0';
+			mode &lt;= '1';
+			Vector_size &lt;= "00";
+			Alu_Op &lt;= "10";
+		END IF;
+		IF (opcode = "1111101")  THEN				-- R-Type Vetorial Instruction (8bits)
+			funct7(6) &lt;= instruction(31);
+			funct7(5) &lt;= instruction(30);
+			funct7(4) &lt;= instruction(29);
+			funct7(3) &lt;= instruction(28);
+			funct7(2) &lt;= instruction(27);
+			funct7(1) &lt;= instruction(26);
+			funct7(0) &lt;= instruction(25);
+			funct3(2) &lt;= instruction (14);
+			funct3(1) &lt;= instruction (13);
+			funct3(0) &lt;= instruction (12);
+			Alu_Src &lt;= '0'; 			
+			Reg_Write &lt;= '1';
+			Mem_To_Reg &lt;= '0';
+			Mem_Read &lt;= '0';
+			Mem_Write &lt;= '0';
+			Branch &lt;= '0';
+			mode &lt;= '1';
+			Vector_size &lt;= "01";
+			Alu_Op &lt;= "10";
+		END IF;
+		IF (opcode = "1111110")	THEN			-- R-Type Vetorial Instruction (16bits)
+			funct7(6) &lt;= instruction(31);
+			funct7(5) &lt;= instruction(30);
+			funct7(4) &lt;= instruction(29);
+			funct7(3) &lt;= instruction(28);
+			funct7(2) &lt;= instruction(27);
+			funct7(1) &lt;= instruction(26);
+			funct7(0) &lt;= instruction(25);
+			funct3(2) &lt;= instruction (14);
+			funct3(1) &lt;= instruction (13);
+			funct3(0) &lt;= instruction (12);
+			Alu_Src &lt;= '0'; 			
+			Reg_Write &lt;= '1';
+			Mem_To_Reg &lt;= '0';
+			Mem_Read &lt;= '0';
+			Mem_Write &lt;= '0';
+			Branch &lt;= '0';
+			mode &lt;= '1';
+			Vector_size &lt;= "10";
+			Alu_Op &lt;= "10";
+		END IF;
+		IF (opcode = "1111000") THEN		-- I-Type Vetorial Instruction (Soma e deslocamento)(4bits)
+			funct7(6) &lt;= '0';
+			funct7(5) &lt;= '0';
+			funct7(4) &lt;= '0';
+			funct7(3) &lt;= '0';
+			funct7(2) &lt;= '0';
+			funct7(1) &lt;= '0';
+			funct7(0) &lt;= '0';
+			funct3(2) &lt;= instruction (14);
+			funct3(1) &lt;= instruction (13);
+			funct3(0) &lt;= instruction (12);
+			Alu_Src &lt;= '1'; 			
+			Reg_Write &lt;= '1';
+			Mem_To_Reg &lt;= '0';
+			Mem_Read &lt;= '0';
+			Mem_Write &lt;= '0';
+			Branch &lt;= '0';
+			mode &lt;= '1';
+			Vector_size &lt;= "00";
+			Alu_Op &lt;= "10";
+		END IF;
+		IF (opcode = "1111001") THEN		-- I-Type Vetorial Instruction (Soma e deslocamento)(8bits)
+			funct7(6) &lt;= '0';
+			funct7(5) &lt;= '0';
+			funct7(4) &lt;= '0';
+			funct7(3) &lt;= '0';
+			funct7(2) &lt;= '0';
+			funct7(1) &lt;= '0';
+			funct7(0) &lt;= '0';
+			funct3(2) &lt;= instruction (14);
+			funct3(1) &lt;= instruction (13);
+			funct3(0) &lt;= instruction (12);
+			Alu_Src &lt;= '1'; 			
+			Reg_Write &lt;= '1';
+			Mem_To_Reg &lt;= '0';
+			Mem_Read &lt;= '0';
+			Mem_Write &lt;= '0';
+			Branch &lt;= '0';
+			mode &lt;= '1';
+			Vector_size &lt;= "01";
+			Alu_Op &lt;= "10";
+		END IF;
+		IF (opcode = "1111010") THEN		-- I-Type Vetorial Instruction (Soma e deslocamento)(16bits)
+			funct7(6) &lt;= '0';
+			funct7(5) &lt;= '0';
+			funct7(4) &lt;= '0';
+			funct7(3) &lt;= '0';
+			funct7(2) &lt;= '0';
+			funct7(1) &lt;= '0';
+			funct7(0) &lt;= '0';
+			funct3(2) &lt;= instruction (14);
+			funct3(1) &lt;= instruction (13);
+			funct3(0) &lt;= instruction (12);
+			Alu_Src &lt;= '1'; 			
+			Reg_Write &lt;= '1';
+			Mem_To_Reg &lt;= '0';
+			Mem_Read &lt;= '0';
+			Mem_Write &lt;= '0';
+			Branch &lt;= '0';
+			mode &lt;= '1';
+			Vector_size &lt;= "10";
+			Alu_Op &lt;= "10";
+		END IF;
+		IF (opcode = "1110000") THEN		-- U-Type Vetorial Instruction (4bits)(auipc)
+			funct7(6) &lt;= '0';
+			funct7(5) &lt;= '0';
+			funct7(4) &lt;= '0';
+			funct7(3) &lt;= '0';
+			funct7(2) &lt;= '0';
+			funct7(1) &lt;= '0';
+			funct7(0) &lt;= '0';
+			funct3(2) &lt;= '0';
+			funct3(1) &lt;= '0';
+			funct3(0) &lt;= '0';
+			Alu_Src &lt;= '1'; 			
+			Reg_Write &lt;= '1';
+			Mem_To_Reg &lt;= '0';
+			Mem_Read &lt;= '0';
+			Mem_Write &lt;= '0';
+			Branch &lt;= '0';
+			Soma_PC &lt;= '1';
+			mode &lt;= '1';
+			Vector_size &lt;= "00";
+			Alu_Op &lt;= "10";
+		END IF;
+		IF (opcode = "1110001") THEN		-- U-Type Vetorial Instruction (4bits)(auipc)
+			funct7(6) &lt;= '0';
+			funct7(5) &lt;= '0';
+			funct7(4) &lt;= '0';
+			funct7(3) &lt;= '0';
+			funct7(2) &lt;= '0';
+			funct7(1) &lt;= '0';
+			funct7(0) &lt;= '0';
+			funct3(2) &lt;= '0';
+			funct3(1) &lt;= '0';
+			funct3(0) &lt;= '0';
+			Alu_Src &lt;= '1'; 			
+			Reg_Write &lt;= '1';
+			Mem_To_Reg &lt;= '0';
+			Mem_Read &lt;= '0';
+			Mem_Write &lt;= '0';
+			Branch &lt;= '0';
+			Soma_PC &lt;= '1';
+			mode &lt;= '1';
+			Vector_size &lt;= "01";
+			Alu_Op &lt;= "10";
+		END IF;
+		IF (opcode = "1110010") THEN		-- U-Type Vetorial Instruction (4bits)(auipc)
+			funct7(6) &lt;= '0';
+			funct7(5) &lt;= '0';
+			funct7(4) &lt;= '0';
+			funct7(3) &lt;= '0';
+			funct7(2) &lt;= '0';
+			funct7(1) &lt;= '0';
+			funct7(0) &lt;= '0';
+			funct3(2) &lt;= '0';
+			funct3(1) &lt;= '0';
+			funct3(0) &lt;= '0';
+			Alu_Src &lt;= '1'; 			
+			Reg_Write &lt;= '1';
+			Mem_To_Reg &lt;= '0';
+			Mem_Read &lt;= '0';
+			Mem_Write &lt;= '0';
+			Branch &lt;= '0';
+			Soma_PC &lt;= '1';
+			mode &lt;= '1';
+			Vector_size &lt;= "10";
+			Alu_Op &lt;= "10";
+		END IF;
+	end process;
+	S_funct7 &lt;= funct7;
+	S_funct3 &lt;= funct3;
+	S_opcode &lt;= opcode;
+end Behavioral;	</vhdl>
+  <vhdl name="ImmGen">library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+entity ImmGen is
+    Port( 
+        instruction: in std_logic_vector(31 downto 0);  	-- Entrada da Instrução 
+        immediate: out std_logic_vector(31 downto 0)  		-- Saída do Valor Imediato
+        );
+end ImmGen;
+
+architecture Behavioral of ImmGen is
+    signal opcode       : std_logic_vector(6 downto 0);  		-- Sinal para armazenr o opcode da instrução
+    signal S_imm  : std_logic_vector(31 downto 0) := "00000000000000000000000000000000";  -- Sinal auxiliar para definição do imediato
+
+begin
+
+    opcode &lt;= instruction(6 downto 0);  -- Definição do opcode
+
+    process(opcode)
+    begin
+        if (opcode = "0010011" or opcode = "0000011" or opcode = "1100111") then  	-- Tipo I 
+            S_imm(11 downto 0)  &lt;= instruction(31 downto 20);  					-- Seleciona o imediato 
+            S_imm(31 downto 12) &lt;= (others =&gt; instruction(31));  				-- Extensão do Bit de Sinal
+        elsif (opcode = "1101111") then  									-- Tipo UJ 
+            S_imm(20) &lt;= instruction(31);  									-- Seleciona o imediato
+            S_imm(10 downto 1) &lt;= instruction(30 downto 21);					-- Seleciona o imediato
+            S_imm(11) &lt;= instruction(20);									-- Seleciona o imediato	
+            S_imm(19 downto 12) &lt;= instruction(19 downto 12);					-- Seleciona o imediato
+            S_imm(31 downto 21) &lt;= (others =&gt; instruction(31));					-- Extensão do Bit de Sinal
+        elsif (opcode = "0110111" or opcode = "0010111") then										-- Tipo U 
+        	  S_imm(31 downto 12) &lt;= instruction(31 downto 12);  					-- Seleciona o imediato	
+        elsif (opcode = "0100011") then  									-- Tipo S 
+            S_imm(11 downto 5)  &lt;= instruction(31 downto 25);  					-- Seleciona o imediato
+            S_imm(4 downto 0)   &lt;= instruction(11 downto 7);   					-- Seleciona o imediato
+            S_imm(31 downto 12) &lt;= (others =&gt; instruction(31));  				-- Extensão do Bit de Sinal
+        elsif (opcode = "1100011") then  									-- Tipo SB
+            S_imm(12)           &lt;= instruction(31);          					-- Seleciona o imediato
+            S_imm(11)           &lt;= instruction(7);           					-- Seleciona o imediato
+            S_imm(10 downto 5)  &lt;= instruction(30 downto 25);  					-- Seleciona o imediato
+            S_imm(4 downto 1)   &lt;= instruction(11 downto 8);   					-- Seleciona o imediato
+            S_imm(31 downto 13) &lt;= (others =&gt; instruction(31));  				-- Extensão do Bit de Sinal
+        end if;
+    end process;
+
+    immediate &lt;= S_imm;  												-- Atribui o valor imeadiato à saída
+
+end Behavioral;
+</vhdl>
+  <vhdl name="PC4">library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.ALL;
+use IEEE.std_logic_unsigned.ALL;
+
+
+ENTITY PC4 IS
+  PORT (
+    clk      : IN  std_logic;                    		-- Entrada do Clock
+    reset    : IN  std_logic;                    		-- Entrada de Reset
+    PC_in    : IN  std_logic_vector(31 DOWNTO 0); 	-- Entrada do endereço atual
+    Write_Enable   : IN std_logic;               		-- Entrada de Habilitação de escrita no PC
+    PC_out   : OUT std_logic_vector(31 DOWNTO 0)  	-- Saída do próximo endereço
+    );
+END PC4;
+
+ARCHITECTURE Behavioral OF PC4 IS
+
+BEGIN
+
+	PROCESS (clk, reset, Write_Enable)
+	BEGIN
+		IF (rising_edge(clk)) THEN                      				-- Detecção do Clock
+			if (PC_in = "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU") then   	-- Verificação de endereço indefinido
+				PC_out &lt;= (others =&gt; '0');               			-- Caso indefinido, início no primeiro endereço
+			elsif (Write_Enable = '0') then              				-- WriteEnable desabilitado
+				PC_out &lt;= PC_in;								-- Manutenção do endereço atual
+			elsif (Write_Enable = '1') then						-- WriteEnable habilitado
+				PC_out &lt;= PC_in + '1';							-- Atualização do endereço
+			end if;
+		END IF;
+		IF (reset = '1') THEN                           				-- Detecção de Reset
+			PC_out &lt;= (others =&gt; '0');                   			-- Retorno ao primeiro endereço
+		END IF;
+	END PROCESS;
+
+END Behavioral;
+</vhdl>
+  <vhdl name="Somador">LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE IEEE.std_logic_unsigned.ALL; 
+
+ENTITY Somador IS
+  PORT (
+    A, B        : IN  std_logic_vector(31 DOWNTO 0); 	-- Entrada de vetores de 32 bits
+    Z           : OUT std_logic_vector(31 DOWNTO 0) 	-- Saída do vetor resultado da soma
+    );
+END Somador;
+
+ARCHITECTURE Behavioral OF somador IS
+
+BEGIN
+
+Z &lt;= A + B; 									-- Vetor resultado da soma
+
+END Behavioral;
+</vhdl>
+  <vhdl name="RegisterFile">library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity RegisterFile is
+  port(
+    Read_Register_1           : in std_logic_vector(4 downto 0);    	-- Endereço do primeiro registrador a ser lido
+    Read_Register_2           : in std_logic_vector(4 downto 0);    	-- Endereço do segundo registrador a ser lido
+    Write_Register      	    : in std_logic_vector(4 downto 0);    	-- Endereço do registrador a ser escrito
+    Write_Data                : in  std_logic_vector(31 downto 0);     -- Dado a ser escrito
+    Reg_Write  			    : in  std_logic;     				-- Sinal de controle
+    Read_Data_1         	    : out  std_logic_vector(31 downto 0);    -- Dado do primeiro registrador lido
+    Read_Data_2       	    : out  std_logic_vector(31 downto 0);    -- Dado do segundo registrador lido
+    clk                 	    : in  std_logic                        	-- Sinal do CLOCK
+    );
+end RegisterFile;
+
+architecture Behavioral of RegisterFile is
+  type RegisterFile is array(0 to 31) of std_logic_vector(31 downto 0);
+  signal Registers : RegisterFile := 
+   ("00000000000000000000000000000000","00000000000000000000000000000000","00000000000000000000000000000000","00000000000000000000000000000000",
+    "00000000000000000000000000000000","00000000000000000000000000000000","00000000000000000000000000000000","00000000000000000000000000000000",
+    "00000000000000000000000000000000","00000000000000000000000000000000","00000000000000000000000000000000","00000000000000000000000000000000",
+    "00000000000000000000000000000000","00000000000000000000000000000000","00000000000000000000000000000000","00000000000000000000000000000000",
+    "00000000000000000000000000000000","00000000000000000000000000000000","00000000000000000000000000000000","00000000000000000000000000000000",
+    "00000000000000000000000000000000","00000000000000000000000000000000","00000000000000000000000000000000","00000000000000000000000000000000",
+    "00000000000000000000000000000000","00000000000000000000000000000000","00000000000000000000000000000000","00000000000000000000000000000000",
+    "00000000000000000000000000000000","00000000000000000000000000000000","00000000000000000000000000000000","00000000000000000000000000000000");
+
+begin
+  regFile : process (clk) is
+  begin
+    if falling_edge(clk) then
+      if (Registers(to_integer(unsigned(Read_Register_1))) = "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU") THEN -- Caso o valor do registrador esteja indefinido, a saída será "000..."
+      	Read_Data_1 &lt;= (others =&gt; '0');  
+      ELSE 
+      	Read_Data_1 &lt;= registers(to_integer(unsigned(Read_Register_1)));  -- Leitura do valor contido no registrador 1
+      END IF;
+      IF (Registers(to_integer(unsigned(Read_Register_2))) = "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU") THEN -- Caso o valor do registrador esteja indefinido, a saída será "000..."
+      	Read_Data_2 &lt;= (others =&gt; '0');  
+      ELSE
+      	Read_Data_2 &lt;= registers(to_integer(unsigned(Read_Register_2)));  -- Leitura do valor contido no registrador 2 
+      END IF;
+    end if; 
+    if rising_edge(clk) then
+      if Reg_Write = '1' then
+        Registers(to_integer(unsigned(Write_Register))) &lt;= Write_Data;      -- Escrita do valor no registrador selecionado
+      end if;
+    end if;
+  end process;
+  
+end Behavioral;
+</vhdl>
+  <vhdl name="IFID">LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY IFID IS
+  PORT (
+    clk         : IN  std_logic;                    -- Entrada do CLOCK
+    PC_in        : IN  std_logic_vector(31 DOWNTO 0); -- Entrada do valor atual do PC (contador de programa)
+    PC4_in	 : IN  std_logic_vector(31 downto 0); -- Entrada do valor do PC mais 4 (próxima instrução)
+    Write_Enable   : IN std_logic;                 -- Entrada do sinal de habilitação de escrita no IFID
+    Instruction_In      : IN  std_logic_vector(31 DOWNTO 0); -- Entrada da instrução atual buscada na memória de instruções
+    PC_out       : OUT std_logic_vector(31 DOWNTO 0); -- Saída do valor atual do PC (contador de programa)
+    PC4_out	 : OUT std_logic_vector(31 downto 0); -- Saída do valor do PC mais 4 (próxima instrução)
+    Instruction_Out     : OUT std_logic_vector(31 DOWNTO 0);  -- Saída da instrução atual buscada na memória de instruções
+    Rs1 : OUT std_logic_vector(4 DOWNTO 0);  -- Saída da instrução atual buscada na memória de instruções
+    Rs2 : OUT std_logic_vector(4 DOWNTO 0);  -- Saída da instrução atual buscada na memória de instruções
+    Rd : OUT std_logic_vector(4 DOWNTO 0)  -- Saída da instrução atual buscada na memória de instruções
+    );
+END IFID;
+
+
+ARCHITECTURE Behavioral OF IFID IS
+
+signal opcode : std_logic_vector(6 downto 0);	-- Opcode da Instrução
+signal s_Rs1 : std_logic_vector(4 downto 0);		-- Rs1 da Instrução
+signal s_Rs2 : std_logic_vector(4 downto 0);		-- Rs2 da Instrução
+signal s_Rd : std_logic_vector(4 downto 0);		-- Rd da Instrução
+SIGNAL IDIF : std_logic_vector(117 DOWNTO 0);  	-- Registrador de 96 bits para armazenar os valores do IFID
+
+BEGIN
+	-- Definição do Opcode da Instrução
+	opcode(0) &lt;= Instruction_In(0);
+	opcode(1) &lt;= Instruction_In(1);
+	opcode(2) &lt;= Instruction_In(2);
+	opcode(3) &lt;= Instruction_In(3);
+	opcode(4) &lt;= Instruction_In(4);
+	opcode(5) &lt;= Instruction_In(5);
+	opcode(6) &lt;= Instruction_In(6);
+
+	process(opcode)
+	begin
+	-- Rs1
+		IF NOT (opcode = "1101111" or opcode = "0110111") THEN  -- Tipos diferentes de U e UJ tem Rs1
+		s_Rs1 (0) &lt;= Instruction_In(15);
+		s_Rs1 (1) &lt;= Instruction_In(16);
+		s_Rs1 (2) &lt;= Instruction_In(17);
+		s_Rs1 (3) &lt;= Instruction_In(18);
+		s_Rs1 (4) &lt;= Instruction_In(19);
+		END IF;
+
+	-- Rs2
+		IF (opcode = "0110011" or opcode = "0100011" or opcode = "1100011") THEN  -- Tipos R, S e Sb tem Rs2
+		s_Rs2 (0) &lt;= Instruction_In(20);
+		s_Rs2 (1) &lt;= Instruction_In(21);
+		s_Rs2 (2) &lt;= Instruction_In(22);
+		s_Rs2 (3) &lt;= Instruction_In(23);
+		s_Rs2 (4) &lt;= Instruction_In(24);
+		END IF;
+
+	-- Rd
+		IF NOT (opcode = "0100011" or opcode = "1100011") THEN  -- Tipos diferentes de S e Sb tem Rd
+		s_Rd (0) &lt;= Instruction_In(7); 
+		s_Rd (1) &lt;= Instruction_In(8);
+		s_Rd (2) &lt;= Instruction_In(9);
+		s_Rd (3) &lt;= Instruction_In(10);
+		s_Rd (4) &lt;= Instruction_In(11);
+		END IF;
+	end process;
+
+	
+	PROCESS (clk, Write_Enable)
+	BEGIN
+		IF (rising_edge(clk)) THEN                   	-- Detecção de subida de CLOCK
+			if (Write_Enable = '1') then             	-- Vericação se o WriteEnable está habilitado
+				IDIF(31 DOWNTO 0) &lt;= Instruction_In;       
+				IDIF(63 DOWNTO 32) &lt;= PC_in;          	-- Armazena o valor atual do PC
+				IDIF(95 downto 64) &lt;= PC4_in;       	-- Armazena o valor do PC mais 4 (próxima instrução)
+				IDIF(102 downto 96) &lt;= opcode;		-- Armazena o opcode
+				IDIF(107 downto 103) &lt;= s_Rs1;		-- Armazena o Rs1
+				IDIF(112 downto 108) &lt;= s_Rs2;		-- Armazena o Rs2
+				IDIF(117 downto 113) &lt;= s_Rd;			-- Armazena o Rd
+			end if;
+		END IF;
+		IF (falling_edge(clk)) THEN                 		-- Detecção de descida de CLOCK
+			PC_out &lt;= IDIF(63 DOWNTO 32);           	-- Definição do PC atual
+			Instruction_Out &lt;= IDIF(31 DOWNTO 0);        -- Definição da instrução armazenada
+			PC4_out &lt;= IDIF(95 downto 64);        		-- Saída de PC+4
+			Rs1 &lt;= IDIF(107 downto 103);				-- Saída do Rs1
+			Rs2 &lt;= IDIF(112 downto 108);				-- Saída do Rs2
+			Rd &lt;= IDIF(117 downto 113);				-- Saída do Rd
+		END IF;
+	END PROCESS;
+	
+END Behavioral;
+</vhdl>
+  <vhdl name="IDEX">LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY IDEX IS
+  PORT (
+    clk             : IN std_logic;                             -- Entrada do sinal de clock            
+    ALU_Src_in       : IN std_logic;                             -- Entradas do ALUSrc e ALUOp, que são sinais de controle para a ALU_Control
+    ALU_Op_in        : IN std_logic_vector(1 downto 0);          -- ALUSrc e ALUOp são usados no estágio EX do pipeline, então não aparecem nos proximos regs do pipeline
+    funct3_in       : IN std_logic_vector(2 downto 0);          -- Entrada do Funct3, usado na ALU_Control
+    funct7_in       : IN std_logic_vector(6 downto 0);          -- Entrada do Funct7, usado na ALU_Control
+    PC_in           : IN std_logic_vector(31 DOWNTO 0);         -- Entrada do valor atual do PC (contador de programa)
+    Soma_PC_in      : IN std_logic;                             -- Entrada do sinal de controle que define quando o PC deve ser somado (jal)        
+    Branch_in       : IN std_logic;                             -- Entrada do sinal de controle que define quando ocorre Branch
+    Mem_Write_in     : IN std_logic;                             -- Entrada do sinal de controle que define quando a Memória será escrita
+    Mem_Read_in      : IN std_logic;                             -- Entrada do sinal de controle que define quando a Memória será lida
+    Reg_Write_in     : IN std_logic;                             -- Entrada do sinal de controle que define quando o registrador será escrito
+    Mem_To_Reg_in     : IN std_logic;                             -- Entrada do sinal de controle que define quando um dado será passado da memória para o registrador
+    read1_in        : IN std_logic_vector(31 DOWNTO 0);         -- Entrada do valor lido do read data 1
+    read2_in        : IN std_logic_vector(31 DOWNTO 0);         -- Entrada do valor lido do read data 2
+    immediate_in    : in std_logic_vector(31 DOWNTO 0);         -- Entrada do imediato gerado pelo ImmGen
+    Rd_in           : IN std_logic_vector(4 DOWNTO 0);          -- Entrada da instrução atual buscada na memória de instruções
+    Opcode_in       : IN std_logic_vector(6 DOWNTO 0);          -- Entrada do Opcode
+    JumpReg_in      : IN std_Logic;                             -- Entrada do JumpReg
+    Rs1_In          : IN std_logic_vector(4 downto 0);          -- Entrada do Rs1   
+    Rs2_In          : IN std_logic_vector(4 downto 0);          -- Entrada do Rs2
+    mode_in         : in std_logic;                             -- Modo de operação: 0 para operação única e 1 para operação vetorial
+    vector_size_in      : in std_logic_vector(1 downto 0);          -- Tamanho do vetor de operações (usado no modo vetorial)
+  
+    ALU_Src_out      : out std_logic;                            -- Saídas do ALUSrc e ALUOp, que são sinais de controle para a ALU_Control
+    ALU_Op_out       : out std_logic_vector(1 downto 0);         -- ALUSrc e ALUOp são usados no estágio EX do pipeline, então não aparecem nos proximos regs do pipeline
+    funct3_out      : out std_logic_vector(2 downto 0);         -- Saída do Funct3, usado na ALU_Control    
+    funct7_out      : out std_logic_vector(6 downto 0);         -- Saída do Funct7, usado na ALU_Control
+    PC_out          : out std_logic_vector(31 DOWNTO 0);        -- Saída do valor atual do PC (contador de programa)
+    Soma_PC_out     : out std_logic;                            -- Saída do sinal de controle que define quando o PC deve ser somado (jal)
+    Branch_out      : out std_logic;                            -- Saída do sinal de controle que define quando ocorre Branch
+    Mem_Write_out    : out std_logic;                            -- Saída do sinal de controle que define quando a Memória será escrita
+    Mem_Read_out     : out std_logic;                            -- Saída do sinal de controle que define quando a Memória será lida
+    Reg_Write_out    : out std_logic;                            -- Saída do sinal de controle que define quando o registrador será escrito
+    Mem_To_Reg_out    : out std_logic;                            -- Saída do sinal de controle que define quando um dado será passado da memória para o registrador
+    read1_out       : out std_logic_vector(31 DOWNTO 0);        -- Saída do valor lido do read data 1
+    read2_out       : out std_logic_vector(31 DOWNTO 0);        -- Saída do valor lido do read data 2   
+    immediate_out   : out std_logic_vector(31 DOWNTO 0);        -- Saída do imediato gerado pelo ImmGen
+    Rd_out          : out std_logic_vector(4 DOWNTO 0);         -- Saída da instrução atual buscada na memória de instruções
+    Opcode_out      : out std_logic_vector(6 DOWNTO 0);         -- Saída do Opcode
+    JumpReg_out     : out std_Logic;                            -- Saída do JumpReg
+    Rs1_out         : out std_logic_vector(4 downto 0);         -- Saída do Rs1 
+    Rs2_out         : out std_logic_vector(4 downto 0);          -- Saída do Rs2
+    mode_out        : out std_logic;                            -- Modo de operação: 0 para operação única e 1 para operação vetorial
+    vector_size_out     : out std_logic_vector(1 downto 0)          -- Tamanho do vetor de operações (usado no modo vetorial)
+    );  
+END IDEX;
+
+
+ARCHITECTURE Behavioral OF IDEX IS
+
+SIGNAL idex_sig : std_logic_vector(173 DOWNTO 0);  -- Registrador de 151 bits para armazenar os valores do IDEX
+
+BEGIN
+
+    PROCESS (clk)
+    BEGIN
+        IF (rising_edge(clk)) THEN                   -- Detecção de subida de CLOCK
+            idex_sig(0) &lt;= ALU_Src_in;          
+            idex_sig(2 downto 1) &lt;= ALU_Op_in;          
+            idex_sig(5 DOWNTO 3) &lt;= funct3_in;      
+            idex_sig(12 DOWNTO 6) &lt;= funct7_in;
+            idex_sig(44 DOWNTO 13) &lt;= PC_in ;  
+            idex_sig(45) &lt;= Soma_PC_in;       
+            idex_sig(46) &lt;= Branch_in;   
+            idex_sig(47) &lt;= Mem_Write_in;   
+            idex_sig(48) &lt;= Mem_Read_in;   
+            idex_sig(49) &lt;= Reg_Write_in;   
+            idex_sig(50) &lt;= Mem_To_Reg_in;   
+            idex_sig(82 DOWNTO 51) &lt;= read1_in;    
+            idex_sig(114 DOWNTO 83) &lt;= read2_in;    
+            idex_sig(146 DOWNTO 115) &lt;= immediate_in;   
+            idex_sig(152 DOWNTO 147) &lt;= Rd_in;
+            idex_sig(159 downto 153) &lt;= Opcode_in; 
+            idex_sig(160) &lt;= JumpReg_in;  
+            idex_sig(165 downto 161) &lt;= Rs1_In;
+            idex_sig(170 downto 166) &lt;= Rs2_In;
+            idex_sig(171) &lt;= mode_in;        
+            idex_sig(173 downto 172) &lt;= vector_size_in;   
+        END IF;
+        IF (falling_edge(clk)) THEN                 -- Detecção de descida de CLOCK
+            ALU_Src_out &lt;= idex_sig(0);       
+            ALU_Op_out  &lt;= idex_sig(2 downto 1);     
+            funct3_out &lt;= idex_sig(5 DOWNTO 3);      
+            funct7_out &lt;= idex_sig(12 DOWNTO 6);    
+            PC_out &lt;= idex_sig(44 DOWNTO 13);
+            Soma_PC_out &lt;= idex_sig(45);
+            Branch_out &lt;= idex_sig(46);
+            Mem_Write_out &lt;= idex_sig(47);
+            Mem_Read_out &lt;= idex_sig(48);
+            Reg_Write_out &lt;= idex_sig(49);
+            Mem_To_Reg_out &lt;= idex_sig(50);
+            read1_out &lt;= idex_sig(82 DOWNTO 51);
+            read2_out &lt;= idex_sig(114 DOWNTO 83);
+            immediate_out &lt;= idex_sig(146 DOWNTO 115);
+            Rd_out &lt;= idex_sig(152 DOWNTO 147);
+            Opcode_out &lt;= idex_sig(159 downto 153);
+            JumpReg_out &lt;= idex_sig(160);
+            Rs1_out &lt;= idex_sig(165 downto 161);
+            Rs2_out &lt;= idex_sig(170 downto 166);
+            mode_out &lt;= idex_sig(171);
+            vector_size_out &lt;= idex_sig(173 downto 172);
+            
+        END IF;
+    END PROCESS;
+
+    
+END Behavioral;</vhdl>
+  <vhdl name="EXMEM">LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY EXMEM IS
+  PORT (
+    clk             : IN std_logic;                             -- Entrada do sinal de clock            
+    Branch_in       : IN std_logic;                             -- Entrada do sinal de controle que define quando ocorre Branch
+    Mem_Write_in     : IN std_logic;                             -- Entrada do sinal de controle que define quando a Memória será escrita
+    Mem_Read_in      : IN std_logic;                             -- Entrada do sinal de controle que define quando a Memória será lida
+    Reg_Write_in     : IN std_logic;                             -- Entrada do sinal de controle que define quando o registrador será escrito
+    Mem_To_Reg_in     : IN std_logic;                             -- Entrada do sinal de controle que define quando um dado será passado da memória para o registrador
+    New_PC_in       : IN std_logic_vector(31 DOWNTO 0);         -- Soma do PC com imediato (jal) ou reg com imediato substituindo PC (jalr)
+    Zero_in         : IN std_logic;                             -- Quando o resultado da ALU foi zero (serve para Branch)
+    ALU_result_in    : IN std_logic_vector(31 DOWNTO 0);         -- Entrada do resultado da operação da ALU
+    read2_in        : IN std_logic_vector(31 DOWNTO 0);         -- Entrada do valor lido do read data 2
+    Rd_in           : IN std_logic_vector(4 DOWNTO 0);          -- Entrada da instrução atual buscada na memória de instruções
+    Jalr_ou_Jal_in	: IN std_logic;					    -- Entrada que indica se é Jalr ou Jal	
+  
+    Branch_out      : out std_logic;                            -- Saída do sinal de controle que define quando ocorre Branch 
+    Mem_Write_out    : out std_logic;                            -- Saída do sinal de controle que define quando a Memória será escrita
+    Mem_Read_out     : out std_logic;                            -- Saída do sinal de controle que define quando a Memória será lida
+    Reg_Write_out    : out std_logic;                            -- Saída do sinal de controle que define quando o registrador será escrito
+    Mem_To_Reg_out    : out std_logic;                            -- Saída do sinal de controle que define quando um dado será passado da memória para o registrador
+    New_PC_out       : out std_logic_vector(31 DOWNTO 0);        -- Soma do PC com imediato (jal) ou reg com imediato substituindo PC (jalr)
+    Zero_out        : out std_logic;                            -- Quando o resultado da ALU foi zero (serve para Branch)
+    ALU_result_out   : out std_logic_vector(31 DOWNTO 0);        -- Saída do resultado da operação da ALU
+    read2_out       : out std_logic_vector(31 DOWNTO 0);        -- Saída do valor lido do read data 2
+    Rd_out          : out std_logic_vector(4 DOWNTO 0);          -- Saída da instrução atual buscada na memória de instruções
+    Jalr_ou_Jal_out	: out std_logic					    -- Saída que indica se é Jalr ou Jal
+    );
+END EXMEM;
+
+
+ARCHITECTURE Behavioral OF EXMEM IS
+
+SIGNAL exmem_sig : std_logic_vector(107 DOWNTO 0);  -- Registrador de 192 bits para armazenar os valores do EXMEM
+
+BEGIN
+
+    PROCESS (clk)
+    BEGIN
+        IF (rising_edge(clk)) THEN                   -- Detecta a borda de subida do sinal de clock
+            exmem_sig(0)    &lt;= Branch_in;          
+            exmem_sig(1)    &lt;= Mem_Write_in;          
+            exmem_sig(2)   &lt;= Mem_Read_in;      
+            exmem_sig(3)   &lt;= Reg_Write_in;
+            exmem_sig(4)   &lt;= Mem_To_Reg_in;  
+            exmem_sig(36 downto 5)    &lt;= New_PC_in;       
+            exmem_sig(37)           &lt;= Zero_in;   
+            exmem_sig(69 downto 38)    &lt;= ALU_result_in;   
+            exmem_sig(101 downto 70)    &lt;= read2_in;   
+            exmem_sig(106 downto 102)    &lt;= Rd_in;   
+            exmem_sig(107) &lt;= Jalr_ou_Jal_in;
+        END IF;
+        IF (falling_edge(clk)) THEN                 -- Detecta a borda de descida do sinal de clock
+            Branch_out    &lt;= exmem_sig(0);       
+            Mem_Write_out  &lt;= exmem_sig(1);     
+            Mem_Read_out  &lt;= exmem_sig(2);      
+            Reg_Write_out &lt;= exmem_sig(3);    
+            Mem_To_Reg_out &lt;= exmem_sig(4);
+            New_PC_out &lt;= exmem_sig(36 downto 5);
+            Zero_out &lt;= exmem_sig(37);
+            ALU_result_out &lt;= exmem_sig(69 downto 38);
+            read2_out &lt;= exmem_sig(101 downto 70);
+            Rd_out &lt;= exmem_sig(106 downto 102);
+            Jalr_ou_Jal_out &lt;= exmem_sig(107);
+        END IF;
+    END PROCESS;
+
+    
+END Behavioral;s</vhdl>
+  <vhdl name="Hazard">library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity Hazard is 
+    port( 
+        clk                 : IN std_logic;                          -- Entrada do sinal de clock
+        Mem_Read_in          : IN std_logic;                          -- Sinal de controle que define quando a Memória será lida
+        Rd_EX               : IN std_logic_vector(4 downto 0);       -- Rd é o endereço de destino da operação feita pelo CPU após o estágio de EX
+        Rs1, Rs2            : IN std_logic_vector(4 downto 0);       -- Rs1 e Rs2 são os endereços dos registradores contidos na instrução
+        stall               : OUT std_logic                          -- Saída que indica se um "stall" (atraso) deve ser aplicado no pipeline
+    );
+end Hazard;
+
+architecture Behavioral of Hazard is
+
+    signal stall_interno : std_logic := '0';  -- Signal temporário que armazena o nível lógico do stall
+
+begin
+    process(clk)
+    begin
+        if ((Mem_Read_in = '1') and ((Rd_EX = Rs1) or (Rd_EX = Rs2))) then        -- Fórmula do livro, página 322
+            stall_interno &lt;= '1';                                                -- Se o sinal de controle de MemRead_in for igual a 1 e o resultado  
+        end if;                                                                  -- do estágio de Execution estiver em Rs1 ou Rs2, realiza um stall
+    end process;
+
+    stall &lt;= stall_interno;                                                     -- Atribui o valor do signal temporário stall_interno à saída stall
+
+end Behavioral;</vhdl>
+  <vhdl name="Forward">library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity Forward is 
+    port( 
+         clk                        : IN std_logic;                         -- Entrada do sinal de clock
+         reg_Write_WB, reg_Write_MEM  : IN std_logic;                         -- Sinais de controle de escrita no registrador do WB e do Mem, respectivamente
+         Rs1, Rs2                   : IN std_logic_vector(4 downto 0);      -- Endereçoes dos registradores Rs1 e Rs2 vindos do estágio ID/EX do pipeline
+         Rd_WB, Rd_Mem              : IN std_logic_vector(4 downto 0);      -- Endereços dos registradores de armazenamento Rd, vindos dos estágios de MEM/WB e EX/MEM do pipeline
+         forward_A, forward_B         : OUT std_logic_vector(1 downto 0)      -- Saídas indicando os forwards para as fontes A e B
+     );
+end Forward;
+
+ARCHITECTURE Behavioral OF MEMWB IS
+    signal forward_A_interno, forward_B_interno : std_logic_vector(1 downto 0) := "00";   -- Sinais internos que armazenam o encaminhamento
+
+begin
+    process(clk)
+    begin
+        if ((reg_Write_MEM = '1') and (not(Rd_Mem = "00000")) and (Rd_Mem = Rs1)) then
+            forward_A_interno &lt;= "10";   
+        end if;
+
+        if ((reg_Write_MEM = '1') and (not(Rd_Mem = "00000")) and (Rd_Mem = Rs2)) then
+            forward_B_interno &lt;= "10";  
+        end if;
+
+        if ((reg_Write_WB = '1') and (not(Rd_WB = "00000")) and (Rd_WB = Rs1)) then
+            forward_A_interno &lt;= "01";   
+        end if;
+
+        if ((reg_Write_WB = '1') and (not(Rd_WB = "00000")) and (Rd_WB = Rs2)) then
+            forward_B_interno &lt;= "01";   
+        end if;
+
+    end process;
+
+    forward_A &lt;= forward_A_interno;  
+    forward_B &lt;= forward_B_interno;
+       
+END Behavioral;</vhdl>
+  <vhdl name="MEMWB">LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY MEMWB IS
+  PORT (
+    clk             : IN std_logic;                             -- Entrada do sinal de clock            
+    Reg_Write_in     : IN std_logic;                             -- Entrada do sinal de controle que define quando o registrador será escrito
+    Mem_To_Reg_in     : IN std_logic;                             -- Entrada do sinal de controle que define quando um dado será passado da memória para o registrador
+    Mem_data_in     : IN std_logic_vector(31 DOWNTO 0);         -- Entrada do valor lido na memória
+    ALU_result_in    : IN std_logic_vector(31 DOWNTO 0);         -- Entrada do resultado da operação da ALU
+    Rd_in           : IN std_logic_vector(4 DOWNTO 0);          -- Entrada da instrução atual buscada na memória de instruções
+  
+    Reg_Write_out    : out std_logic;                            -- Saída do sinal de controle que define quando o registrador será escrito
+    Mem_To_Reg_out    : out std_logic;                            -- Saída do sinal de controle que define quando um dado será passado da memória para o registrador
+    Mem_data_out    : out std_logic_vector(31 DOWNTO 0);        -- Saída do valor lido na memória
+    ALU_result_out   : out std_logic_vector(31 DOWNTO 0);        -- Saída do resultado da operação da ALU
+    Rd_out          : out std_logic_vector(4 DOWNTO 0)          -- Saída da instrução atual buscada na memória de instruções
+    );
+END MEMWB;
+
+
+ARCHITECTURE Behavioral OF MEMWB IS
+
+SIGNAL memwb_sig : std_logic_vector(70 DOWNTO 0);  -- Registrador de 70 bits para armazenar os valores do memwb
+
+BEGIN
+
+    PROCESS (clk)
+    BEGIN
+        IF (rising_edge(clk)) THEN                   -- Detecta a borda de subida do sinal de clock     
+            memwb_sig(0)   &lt;= Reg_Write_in;
+            memwb_sig(1)   &lt;= Mem_To_Reg_in;  
+            memwb_sig(33 downto 2)  &lt;= Mem_data_in ;       
+            memwb_sig(65 downto 34)  &lt;= ALU_result_in;   
+            memwb_sig(70 downto 66)  &lt;= Rd_in;   
+        END IF;
+        IF (falling_edge(clk)) THEN                 -- Detecta a borda de descida do sinal de clock
+            Reg_Write_out &lt;= memwb_sig(0);    
+            Mem_To_Reg_out &lt;= memwb_sig(1);
+            Mem_data_out &lt;= memwb_sig(33 downto 2);
+            ALU_result_out &lt;= memwb_sig(65 downto 34);
+            Rd_out &lt;= memwb_sig(70 downto 66);
+        END IF;
+    END PROCESS;
+
+    
+END Behavioral;</vhdl>
+</project>
